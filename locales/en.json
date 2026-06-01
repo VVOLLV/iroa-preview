@@ -1,0 +1,74 @@
+﻿{
+    "meta":  {
+                 "title":  "Roa - A place for your thoughts",
+                 "description":  "Roa is a canvas that thinks. Not just notes, exploration."
+             },
+    "nav":  {
+                "logo":  "Roa"
+            },
+    "hero":  {
+                 "title":  "A place for your thoughts",
+                 "subtitle":  "Roa is a canvas that thinks. Not just notes, exploration.",
+                 "cta":  "Start my first canvas",
+                 "cta-secondary":  "See what it can do"
+             },
+    "features":  {
+                     "title":  "What it can do",
+                     "subtitle":  "Three capabilities that will surprise you"
+                 },
+    "feature":  {
+                    "1":  {
+                              "title":  "Thoughts, finally shaped",
+                              "desc":  "Nodes and connections make abstract ideas visible, touchable, and reorganizable."
+                          },
+                    "2":  {
+                              "title":  "AI waits, never interrupts",
+                              "desc":  "AI appears when you need it, stays silent when you think. It respects your rhythm."
+                          },
+                    "3":  {
+                              "title":  "Big picture and detail, together",
+                              "desc":  "Zoom freely—see the forest and every single leaf at once."
+                          }
+                },
+    "philosophy":  {
+                       "label":  "THINKING SPACE",
+                       "sub2":  "a home",
+                       "line1":  "Thinking is an",
+                       "line2":  "activity that",
+                       "line3":  "needs space.",
+                       "sub1":  "We built it"
+                   },
+    "scenarios":  {
+                      "title":  "Who uses it",
+                      "subtitle":  "Four types of people, one shared need"
+                  },
+    "scenario":  {
+                     "1":  {
+                               "title":  "Knowledge Workers",
+                               "desc":  "Organize complex information, explore solutions in parallel. Find order in chaos."
+                           },
+                     "2":  {
+                               "title":  "Researchers",
+                               "desc":  "Organize literature, compare experiments. Nodes and connections carry your context."
+                           },
+                     "3":  {
+                               "title":  "Product/Designers",
+                               "desc":  "Break down requirements, visualize workflows. Drag and connect to feel free."
+                           },
+                     "4":  {
+                               "title":  "Students/Lifelong Learners",
+                               "desc":  "Plan learning, accumulate knowledge. Guest mode lets you explore stress-free."
+                           }
+                 },
+    "cta":  {
+                "title":  "Your first canvas starts now",
+                "note":  "No sign-up needed. Try as guest. Your thoughts are safe.",
+                "button":  "Start my first canvas"
+            },
+    "footer":  {
+                   "tagline":  "Built for thinkers",
+                   "privacy":  "Privacy Policy",
+                   "terms":  "Terms of Service",
+                   "contact":  "Contact Us"
+               }
+}
