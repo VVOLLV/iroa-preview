@@ -10,55 +10,6 @@ const ThemeSystem = (() => {
   let currentTheme = 'light';
 
   /**
-   * Generate random HSL color with constraints
-   * - Hue: random 0-360
-   * - Saturation: <= 40%
-   * - Lightness: >= 70% (for backgrounds)
-   * - Seed: current date (consistent within same day)
-   */
-  function generateRandomTheme() {
-    const today = new Date();
-    const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
-    
-    // Simple seeded random function
-    const seededRandom = (s) => {
-      const x = Math.sin(s) * 10000;
-      return x - Math.floor(x);
-    };
-
-    const hue = Math.floor(seededRandom(seed) * 360);
-    const saturation = Math.floor(seededRandom(seed + 1) * 30) + 10; // 10-40%
-    const lightness = Math.floor(seededRandom(seed + 2) * 15) + 75; // 75-90%
-
-    // Derive other colors based on base HSL
-    const bgLightness = lightness;
-    const cardLightness = Math.min(95, lightness + 10);
-    const elevatedLightness = Math.max(70, lightness - 5);
-    const textLightness = Math.floor(seededRandom(seed + 3) * 10) + 15; // 15-25%
-    const mutedLightness = Math.floor(seededRandom(seed + 4) * 10) + 40; // 40-50%
-    const primarySaturation = Math.min(40, saturation + 15);
-    const primaryLightness = Math.floor(seededRandom(seed + 5) * 10) + 50; // 50-60%
-    const nodeLightness = Math.floor(seededRandom(seed + 6) * 10) + 55; // 55-65%
-    const lineLightness = Math.floor(seededRandom(seed + 7) * 10) + 70; // 70-80%
-    const borderLightness = Math.floor(seededRandom(seed + 8) * 5) + 80; // 80-85%
-
-    return {
-      '--color-bg': `hsl(${hue}, ${saturation}%, ${bgLightness}%)`,
-      '--color-bg-card': `hsl(${hue}, ${Math.min(25, saturation)}%, ${cardLightness}%)`,
-      '--color-bg-elevated': `hsl(${hue}, ${saturation}%, ${elevatedLightness}%)`,
-      '--color-text': `hsl(${hue}, ${Math.min(40, saturation + 10)}%, ${textLightness}%)`,
-      '--color-text-muted': `hsl(${hue}, ${Math.min(30, saturation)}%, ${mutedLightness}%)`,
-      '--color-primary': `hsl(${(hue + 10) % 360}, ${primarySaturation}%, ${primaryLightness}%)`,
-      '--color-primary-hover': `hsl(${(hue + 10) % 360}, ${primarySaturation}%, ${Math.max(40, primaryLightness - 10)}%)`,
-      '--color-node': `hsl(${hue}, ${Math.min(35, saturation + 5)}%, ${nodeLightness}%)`,
-      '--color-line': `hsl(${hue}, ${Math.min(20, saturation)}%, ${lineLightness}%)`,
-      '--color-border': `hsl(${hue}, ${Math.min(20, saturation)}%, ${borderLightness}%)`,
-      '--color-shadow': `hsla(${hue}, ${saturation}%, ${textLightness}%, 0.08)`,
-      '--color-shadow-lg': `hsla(${hue}, ${saturation}%, ${textLightness}%, 0.12)`
-    };
-  }
-
-  /**
    * Apply theme to document
    */
   function applyTheme(theme) {
@@ -73,19 +24,14 @@ const ThemeSystem = (() => {
     root.setAttribute('data-theme', theme);
     currentTheme = theme;
 
-    // Apply random theme colors if needed
+    // For random theme: use CSS [data-theme="random"] variables (white base + Google glow)
+    // Clear any inline custom properties so CSS takes over
+    const inlineProps = ['--color-bg','--color-bg-card','--color-bg-elevated','--color-text',
+      '--color-text-muted','--color-primary','--color-primary-hover','--color-node',
+      '--color-line','--color-border','--color-shadow','--color-shadow-lg'];
+    inlineProps.forEach(key => root.style.removeProperty(key));
     if (theme === 'random') {
-      const colors = generateRandomTheme();
-      Object.entries(colors).forEach(([key, value]) => {
-        root.style.setProperty(key, value);
-      });
-      console.log('[Theme] Applied random theme colors');
-    } else {
-      // Clear custom properties for non-random themes
-      const colors = generateRandomTheme();
-      Object.keys(colors).forEach(key => {
-        root.style.removeProperty(key);
-      });
+      console.log('[Theme] Applied random theme (white base + Google glow)');
     }
 
     // Update UI buttons

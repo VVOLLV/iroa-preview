@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Roa Scroll Interaction System v4
  * Clean, polished animations
  */
@@ -13,6 +13,26 @@ const ScrollSystem = (() => {
     isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
 
+  function createFloatingParticles(svg) {
+    const particleCount = 20;
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      const x = Math.random() * 100;
+      const y = Math.random() * 100;
+      const r = Math.random() * 2 + 1;
+      particle.setAttribute('cx', `${x}%`);
+      particle.setAttribute('cy', `${y}%`);
+      particle.setAttribute('r', r.toString());
+      particle.setAttribute('fill', 'var(--color-node)');
+      particle.setAttribute('opacity', (Math.random() * 0.15 + 0.05).toFixed(2));
+      particle.classList.add('hero-particle');
+      particle.dataset.baseX = x;
+      particle.dataset.baseY = y;
+      particle.dataset.speed = (Math.random() * 0.5 + 0.2).toFixed(2);
+      svg.appendChild(particle);
+    }
+  }
+
   function createHeroNodes() {
     heroCanvas = document.getElementById('hero-canvas');
     if (!heroCanvas) return;
@@ -23,6 +43,9 @@ const ScrollSystem = (() => {
     svg.style.position = 'absolute';
     svg.style.top = '0';
     svg.style.left = '0';
+
+    // Add floating particles
+    createFloatingParticles(svg);
 
     const nodePositions = [
       { x: 15, y: 30 }, { x: 35, y: 20 }, { x: 55, y: 35 },
@@ -126,6 +149,33 @@ const ScrollSystem = (() => {
         });
       }
     });
+
+    // Gentle breathing/floating animation for visible nodes
+    if (typeof gsap !== 'undefined') {
+      heroNodes.forEach((node, i) => {
+        gsap.to(node, {
+          y: `+=${Math.sin(i * 0.7) * 8}`,
+          x: `+=${Math.cos(i * 0.5) * 5}`,
+          duration: 3 + i * 0.3,
+          repeat: -1,
+          yoyo: true,
+          ease: 'sine.inOut'
+        });
+      });
+
+      // Subtle hero content parallax on scroll
+      gsap.to('.hero-content', {
+        y: 100,
+        opacity: 0.3,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1
+        }
+      });
+    }
   }
 
   function initFeatureAnimations() {
@@ -152,69 +202,6 @@ const ScrollSystem = (() => {
   /**
    * Philosophy - Clean animation
    */
-  function initPhilosophyAnimations() {
-    const section = document.getElementById('philosophy');
-    if (!section) return;
-
-    if (isReducedMotion) {
-      section.querySelectorAll('.philosophy-line, .philosophy-brand, .philosophy-ai, .philosophy-sub-line, .philosophy-domain').forEach(el => {
-        el.style.opacity = '1';
-        el.style.transform = 'none';
-      });
-      return;
-    }
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#philosophy',
-        start: 'top 70%',
-        toggleActions: 'play none none reverse'
-      }
-    });
-
-    // Brand text
-    tl.fromTo('.philosophy-brand',
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
-    );
-
-    // Title lines
-    tl.fromTo('.philosophy-line',
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: 'power2.out' },
-      '-=0.2'
-    );
-
-    // AI badge
-    tl.fromTo('.philosophy-ai',
-      { opacity: 0, scale: 0.9 },
-      { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.5)' },
-      '-=0.2'
-    );
-
-    // Subtitle
-    tl.fromTo('.philosophy-sub-line',
-      { opacity: 0, y: 15 },
-      { opacity: 1, y: 0, duration: 0.4, stagger: 0.08, ease: 'power2.out' },
-      '-=0.2'
-    );
-
-    // Domain
-    tl.fromTo('.philosophy-domain',
-      { opacity: 0, y: 15 },
-      { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' },
-      '-=0.1'
-    );
-
-    // Slow circle rotation
-    gsap.to('.philosophy-circle-svg', {
-      rotation: 360,
-      duration: 120,
-      repeat: -1,
-      ease: 'none'
-    });
-  }
-
   function initScenarioAnimations() {
     if (isReducedMotion) {
       document.querySelectorAll('.scenario-card').forEach(card => {
@@ -224,74 +211,34 @@ const ScrollSystem = (() => {
       return;
     }
 
-    if (window.innerWidth > 768) {
-      const track = document.querySelector('.scenarios-track');
-      const grid = document.querySelector('.scenarios-grid');
-      
-      if (track && grid) {
-        const totalWidth = grid.scrollWidth - track.offsetWidth;
-        ScrollTrigger.create({
-          trigger: '#scenarios',
-          start: 'top top',
-          end: `+=${totalWidth}`,
-          pin: true,
-          scrub: 1,
-          onUpdate: (self) => {
-            grid.style.transform = `translateX(${-self.progress * totalWidth}px)`;
-          }
-        });
-      }
-    }
-
     gsap.utils.toArray('.scenario-card').forEach((card, i) => {
       gsap.fromTo(card,
-        { opacity: 0, scale: 0.95 },
+        { opacity: 0, y: 30 },
         {
-          opacity: 1, scale: 1, duration: 0.6, ease: 'power2.out',
+          opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
           scrollTrigger: {
             trigger: card,
-            start: window.innerWidth > 768 ? 'left 80%' : 'top 85%',
-            toggleActions: 'play none none reverse',
-            horizontal: window.innerWidth > 768
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
           },
-          delay: i * 0.08
+          delay: i * 0.1
         }
       );
     });
   }
 
-  function initCTAAnimations() {
-    if (isReducedMotion) {
-      ['.cta-title', '.cta-note', '.cta .btn'].forEach(sel => {
-        const el = document.querySelector(sel);
-        if (el) {
-          el.style.opacity = '1';
-          el.style.transform = 'none';
-        }
-      });
-      return;
-    }
+  function initFloatingCTA() {
+    var floatingBtn = document.getElementById('floating-cta');
+    if (!floatingBtn) return;
 
-    gsap.fromTo('.cta-title',
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out',
-        scrollTrigger: { trigger: '#cta', start: 'top 80%', toggleActions: 'play none none reverse' }
-      }
-    );
+    var scenariosSection = document.getElementById('scenarios');
+    if (!scenariosSection) return;
 
-    gsap.fromTo('.cta-note',
-      { opacity: 0 },
-      { opacity: 1, duration: 0.6, delay: 0.2, ease: 'power2.out',
-        scrollTrigger: { trigger: '#cta', start: 'top 80%', toggleActions: 'play none none reverse' }
-      }
-    );
-
-    gsap.fromTo('.cta .btn',
-      { opacity: 0, y: 10 },
-      { opacity: 1, y: 0, duration: 0.6, delay: 0.4, ease: 'power2.out',
-        scrollTrigger: { trigger: '#cta', start: 'top 80%', toggleActions: 'play none none reverse' }
-      }
-    );
+    window.addEventListener('scroll', function() {
+      var rect = scenariosSection.getBoundingClientRect();
+      var show = rect.bottom < window.innerHeight * 0.5;
+      floatingBtn.classList.toggle('visible', show);
+    }, { passive: true });
   }
 
   function initNavbarScroll() {
@@ -309,9 +256,8 @@ const ScrollSystem = (() => {
 
     initHeroAnimations();
     initFeatureAnimations();
-    initPhilosophyAnimations();
     initScenarioAnimations();
-    initCTAAnimations();
+    initFloatingCTA();
     initNavbarScroll();
 
     console.log('[Scroll] Initialized');

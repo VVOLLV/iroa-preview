@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Roa Main Application v3
  * Orchestrates all systems with robust error handling and debugging
  */
@@ -96,6 +96,12 @@ const RoaApp = (() => {
       results.analytics = await safeInit('Analytics', () => Analytics.init());
     }
 
+    // Add mobile menu
+    initMobileMenu();
+
+    // Add friend links toggle
+    initFriendLinksToggle();
+
     // Add smooth scroll for anchor links
     initSmoothScroll();
 
@@ -118,6 +124,63 @@ const RoaApp = (() => {
   /**
    * Initialize smooth scrolling for anchor links
    */
+  function initMobileMenu() {
+    const hamburger = document.querySelector('.nav-hamburger');
+    const navControls = document.querySelector('.nav-controls');
+    if (!hamburger || !navControls) return;
+
+    // Create backdrop
+    const backdrop = document.createElement('div');
+    backdrop.className = 'nav-backdrop';
+    document.body.appendChild(backdrop);
+
+    function toggleMenu(open) {
+      const isOpen = open !== undefined ? open : !navControls.classList.contains('open');
+      navControls.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen.toString());
+      backdrop.classList.toggle('visible', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', () => toggleMenu());
+    backdrop.addEventListener('click', () => toggleMenu(false));
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') toggleMenu(false);
+    });
+
+    // Close when a control is clicked
+    navControls.querySelectorAll('.lang-btn, .theme-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setTimeout(() => toggleMenu(false), 150);
+      });
+    });
+  }
+
+  function initFriendLinksToggle() {
+    const grid = document.querySelector('.footer-friends-grid');
+    const toggle = document.querySelector('.friends-toggle');
+    if (!grid || !toggle) return;
+
+    // Start collapsed
+    grid.classList.add('collapsed');
+    toggle.setAttribute('aria-expanded', 'false');
+
+    toggle.addEventListener('click', () => {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        grid.classList.add('collapsed');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.querySelector('.friends-toggle-text').textContent = '\u5c55\u5f00\u66f4\u591a';
+      } else {
+        grid.classList.remove('collapsed');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.querySelector('.friends-toggle-text').textContent = '\u6536\u8d77';
+      }
+    });
+  }
+
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {

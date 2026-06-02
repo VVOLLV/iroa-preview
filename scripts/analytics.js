@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Roa Analytics System v2
  * Anonymous event tracking - enabled by default (no consent dialog)
  */
@@ -189,6 +189,14 @@ const Analytics = (() => {
   /**
    * Initialize analytics system
    */
+  function debounce(fn, delay) {
+    let timer;
+    return function (...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn.apply(this, args), delay);
+    };
+  }
+
   function init() {
     // Generate session ID
     sessionId = generateSessionId();
@@ -198,7 +206,7 @@ const Analytics = (() => {
     trackPageView();
 
     // Track scroll depth
-    window.addEventListener('scroll', trackScrollDepth, { passive: true });
+    window.addEventListener('scroll', debounce(trackScrollDepth, 150), { passive: true });
 
     // Track CTA clicks
     document.querySelectorAll('.btn-primary').forEach(btn => {

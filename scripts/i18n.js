@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Roa i18n System v2
  * Robust language switching with inline fallback translations
  */
@@ -12,53 +12,53 @@ const I18nSystem = (() => {
   const INLINE_TRANSLATIONS = {
     zh: {
       meta: {
-        title: "Roa - 让思考，有地方落脚",
-        description: "Roa 是一块会思考的画布。你在这里不只是记录，而是探索。"
+        title: "Roa - ��˼�����еط����",
+        description: "Roa ��һ���˼���Ļ������������ﲻֻ�Ǽ�¼������̽����"
       },
       nav: { logo: "Roa" },
       hero: {
-        title: "让思考，有地方落脚",
-        subtitle: "Roa 是一块会思考的画布。你在这里不只是记录，而是探索。",
-        cta: "开始我的第一块画布",
-        "cta-secondary": "先看看它能做什么"
+        title: "��˼�����еط����",
+        subtitle: "Roa ��һ���˼���Ļ������������ﲻֻ�Ǽ�¼������̽����",
+        cta: "��ʼ�ҵĵ�һ�黭��",
+        "cta-secondary": "�ȿ���������ʲô"
       },
       features: {
-        title: "它能做什么",
-        subtitle: "三个让你惊喜的能力"
+        title: "������ʲô",
+        subtitle: "�������㾪ϲ������"
       },
       feature: {
-        1: { title: "思考，终于有了形状", desc: "节点和连线让抽象的想法变得可见、可触、可重组。" },
-        2: { title: "AI 不打断你，它等你", desc: "AI 在你需要时出现，在你思考时沉默。它尊重你的节奏。" },
-        3: { title: "大局与细节，同时看见", desc: "缩放自如，既能看到森林，也能看清每一片叶子。" }
+        1: { title: "˼��������������״", desc: "�ڵ�������ó�����뷨��ÿɼ����ɴ��������顣" },
+        2: { title: "AI ������㣬������", desc: "AI ������Ҫʱ���֣�����˼��ʱ��Ĭ����������Ľ��ࡣ" },
+        3: { title: "�����ϸ�ڣ�ͬʱ����", desc: "�������磬���ܿ���ɭ�֣�Ҳ�ܿ���ÿһƬҶ�ӡ�" }
       },
       philosophy: {
         label: "THINKING SPACE",
-        line1: "思考，是一种",
-        line2: "需要空间的",
-        line3: "活动。",
-        sub1: "我们为它",
-        sub2: "建了一个家"
+        line1: "˼������һ��",
+        line2: "��Ҫ�ռ��",
+        line3: "���",
+        sub1: "����Ϊ��",
+        sub2: "����һ����"
       },
       scenarios: {
-        title: "谁在用它",
-        subtitle: "四种人，同一个需求"
+        title: "˭������",
+        subtitle: "�����ˣ�ͬһ������"
       },
       scenario: {
-        1: { title: "知识工作者", desc: "组织复杂信息，并行探索方案。在混乱中找到秩序。" },
-        2: { title: "研究者", desc: "整理文献，对比实验。节点和连线承载你的上下文。" },
-        3: { title: "产品/设计师", desc: "拆解需求，可视化流程。拖拽和连线让你感到自由。" },
-        4: { title: "学生/终身学习者", desc: "学习规划，知识积累。游客模式让你无压力体验。" }
+        1: { title: "֪ʶ������", desc: "��֯������Ϣ������̽���������ڻ������ҵ�����" },
+        2: { title: "�о���", desc: "�������ף��Ա�ʵ�顣�ڵ�����߳�����������ġ�" },
+        3: { title: "��Ʒ/���ʦ", desc: "������󣬿��ӻ����̡���ק����������е����ɡ�" },
+        4: { title: "ѧ��/����ѧϰ��", desc: "ѧϰ�滮��֪ʶ���ۡ��ο�ģʽ������ѹ�����顣" }
       },
       cta: {
-        title: "你的第一块画布，现在就可以开始",
-        note: "无需注册，游客模式直接体验。你的想法不会丢失。",
-        button: "开始我的第一块画布"
+        title: "��ĵ�һ�黭�������ھͿ��Կ�ʼ",
+        note: "����ע�ᣬ�ο�ģʽֱ�����顣����뷨���ᶪʧ��",
+        button: "��ʼ�ҵĵ�һ�黭��"
       },
       footer: {
-        tagline: "为思考者而建",
-        privacy: "隐私政策",
-        terms: "使用条款",
-        contact: "联系我们"
+        tagline: "Ϊ˼���߶���",
+        privacy: "��˽����",
+        terms: "ʹ������",
+        contact: "��ϵ����"
       }
     },
     en: {
@@ -80,7 +80,7 @@ const I18nSystem = (() => {
       feature: {
         1: { title: "Thoughts, finally shaped", desc: "Nodes and connections make abstract ideas visible, touchable, and reorganizable." },
         2: { title: "AI waits, never interrupts", desc: "AI appears when you need it, stays silent when you think. It respects your rhythm." },
-        3: { title: "Big picture and detail, together", desc: "Zoom freely—see the forest and every single leaf at once." }
+        3: { title: "Big picture and detail, together", desc: "Zoom freely��see the forest and every single leaf at once." }
       },
       philosophy: {
         label: "THINKING SPACE",
@@ -114,104 +114,104 @@ const I18nSystem = (() => {
     },
     ja: {
       meta: {
-        title: "Roa - 思考に、居場所を",
-        description: "Roa は考えるキャンバス。記録だけでなく、探求の場。"
+        title: "Roa - ˼���ˡ��ӈ�����",
+        description: "Roa �Ͽ����륭���Х���ӛ�h�����Ǥʤ���̽��Έ���"
       },
       nav: { logo: "Roa" },
       hero: {
-        title: "思考に、居場所を",
-        subtitle: "Roa は考えるキャンバス。記録だけでなく、探求の場。",
-        cta: "はじめてのキャンバスを",
-        "cta-secondary": "できることを見る"
+        title: "˼���ˡ��ӈ�����",
+        subtitle: "Roa �Ͽ����륭���Х���ӛ�h�����Ǥʤ���̽��Έ���",
+        cta: "�Ϥ���ƤΥ����Х���",
+        "cta-secondary": "�Ǥ��뤳�Ȥ�Ҋ��"
       },
       features: {
-        title: "できること",
-        subtitle: "あなたを驚かせる3つの力"
+        title: "�Ǥ��뤳��",
+        subtitle: "���ʤ����@������3�Ĥ���"
       },
       feature: {
-        1: { title: "思考が、かたちになる", desc: "ノードと接続で、抽象的なアイデアが見えたり、触ったり、再構成できるように。" },
-        2: { title: "AI は待つ。遮らない。", desc: "AI は必要な時に現れ、考えている時は沈黙します。あなたのリズムを尊重します。" },
-        3: { title: "全体と詳細を、同時に", desc: "自由にズーム—森とすべての葉を同時に見ることができます。" }
+        1: { title: "˼�������������ˤʤ�", desc: "�Ω`�ɤȽӾA�ǡ�����Ĥʥ����ǥ���Ҋ�����ꡢ���ä��ꡢ�٘��ɤǤ���褦�ˡ�" },
+        2: { title: "AI �ϴ��ġ��ڤ�ʤ���", desc: "AI �ϱ�Ҫ�ʕr�ˬF�졢�����Ƥ���r�����a���ޤ������ʤ��Υꥺ������ؤ��ޤ���" },
+        3: { title: "ȫ���Ԕ����ͬ�r��", desc: "���ɤ˥��`�ࡪɭ�Ȥ��٤Ƥ��~��ͬ�r��Ҋ�뤳�Ȥ��Ǥ��ޤ���" }
       },
       philosophy: {
         label: "THINKING SPACE",
-        line1: "思考とは、",
-        line2: "空間を必要とする",
-        line3: "活動です。",
-        sub1: "それに、",
-        sub2: "居場所を建てた"
+        line1: "˼���Ȥϡ�",
+        line2: "���g���Ҫ�Ȥ���",
+        line3: "��ӤǤ���",
+        sub1: "����ˡ�",
+        sub2: "�ӈ����򽨤Ƥ�"
       },
       scenarios: {
-        title: "誰が使っているか",
-        subtitle: "4タイプの人々、共通のニーズ"
+        title: "�l��ʹ�äƤ��뤫",
+        subtitle: "4�����פ��ˡ�����ͨ�Υ˩`��"
       },
       scenario: {
-        1: { title: "ナレッジワーカー", desc: "複雑な情報を整理し、並行してソリューションを探索。混沌の中に秩序を見つける。" },
-        2: { title: "研究者", desc: "文献を整理し、実験を比較。ノードと接続があなたのコンテキストを保持します。" },
-        3: { title: "プロダクト/デザイナー", desc: "要件を分解し、ワークフローを可視化。ドラッグと接続で自由を感じる。" },
-        4: { title: "学生/生涯学習者", desc: "学習計画、知識の蓄積。ゲストモードでストレスなく体験できます。" }
+        1: { title: "�ʥ�å���`���`", desc: "�}�j���������������K�Ф��ƥ����`������̽����������Ф������Ҋ�Ĥ��롣" },
+        2: { title: "�о���", desc: "���פ����������g�Y����^���Ω`�ɤȽӾA�����ʤ��Υ���ƥ����Ȥ򱣳֤��ޤ���" },
+        3: { title: "�ץ�������/�ǥ����ʩ`", desc: "Ҫ����ֽ⤷����`���ե��`���ҕ�����ɥ�å��ȽӾA�����ɤ�Ф��롣" },
+        4: { title: "ѧ��/����ѧ����", desc: "ѧ��Ӌ����֪�R����e�������ȥ�`�ɤǥ��ȥ쥹�ʤ����Y�Ǥ��ޤ���" }
       },
       cta: {
-        title: "はじめてのキャンバスは、今",
-        note: "登録不要。ゲストで体験できます。データは失われません。",
-        button: "はじめてのキャンバスを"
+        title: "�Ϥ���ƤΥ����Х��ϡ���",
+        note: "���h��Ҫ�������Ȥ����Y�Ǥ��ޤ����ǩ`����ʧ���ޤ���",
+        button: "�Ϥ���ƤΥ����Х���"
       },
       footer: {
-        tagline: "思考者のために",
-        privacy: "プライバシーポリシー",
-        terms: "利用規約",
-        contact: "お問い合わせ"
+        tagline: "˼���ߤΤ����",
+        privacy: "�ץ饤�Х��`�ݥꥷ�`",
+        terms: "����Ҏ�s",
+        contact: "�������Ϥ碌"
       }
     },
     ko: {
       meta: {
-        title: "Roa - 생각에, 자리를",
-        description: "Roa는 생각하는 캔버스. 기록이 아닌, 탐색의 공간."
+        title: "Roa - ???, ???",
+        description: "Roa? ???? ???. ??? ??, ??? ??."
       },
       nav: { logo: "Roa" },
       hero: {
-        title: "생각에, 자리를",
-        subtitle: "Roa는 생각하는 캔버스. 기록이 아닌, 탐색의 공간.",
-        cta: "첫 번째 캔버스 시작",
-        "cta-secondary": "무엇을 할 수 있는지 보기"
+        title: "???, ???",
+        subtitle: "Roa? ???? ???. ??? ??, ??? ??.",
+        cta: "? ?? ??? ??",
+        "cta-secondary": "??? ? ? ??? ??"
       },
       features: {
-        title: "무엇을 할 수 있나요",
-        subtitle: "당신을 놀라게 할 세 가지 능력"
+        title: "??? ? ? ???",
+        subtitle: "??? ??? ? ? ?? ??"
       },
       feature: {
-        1: { title: "생각이, 형태를 갖추다", desc: "노드와 연결로 추상적인 아이디어를 보고, 만지고, 재구성할 수 있습니다." },
-        2: { title: "AI는 기다립니다. 끊지 않아요.", desc: "AI는 필요할 때 나타나고, 생각할 때 침묵합니다. 당신의 리듬을 존중합니다." },
-        3: { title: "전체와 세부를, 동시에", desc: "자유롭게 확대—숲과 모든 나뭇잎을 동시에 볼 수 있습니다." }
+        1: { title: "???, ??? ???", desc: "??? ??? ???? ????? ??, ???, ???? ? ????." },
+        2: { title: "AI? ?????. ?? ???.", desc: "AI? ??? ? ????, ??? ? ?????. ??? ??? ?????." },
+        3: { title: "??? ???, ???", desc: "???? ??��?? ?? ???? ??? ? ? ????." }
       },
       philosophy: {
         label: "THINKING SPACE",
-        line1: "생각이란,",
-        line2: "공간이 필요한",
-        line3: "활동입니다.",
-        sub1: "우리는 그곳을",
-        sub2: "지었습니다"
+        line1: "????,",
+        line2: "??? ???",
+        line3: "?????.",
+        sub1: "??? ???",
+        sub2: "?????"
       },
       scenarios: {
-        title: "누가 사용하나요",
-        subtitle: "네 가지 유형의 사람들, 하나의 공통된 필요"
+        title: "?? ?????",
+        subtitle: "? ?? ??? ???, ??? ??? ??"
       },
       scenario: {
-        1: { title: "지식 근로자", desc: "복잡한 정보를 정리하고, 병렬로 솔루션을 탐색합니다. 혼돈 속에서 질서를 찾으세요." },
-        2: { title: "연구자", desc: "문헌을 정리하고, 실험을 비교합니다. 노드와 연결이 당신의 맥락을 담습니다." },
-        3: { title: "프로덕트/디자이너", desc: "요구사항을 분해하고, 워크플로를 시각화합니다. 드래그와 연결로 자유를 느끼세요." },
-        4: { title: "학생/평생 학습자", desc: "학습 계획, 지식 축적. 게스트 모드로 부담 없이 체험하세요." }
+        1: { title: "?? ???", desc: "??? ??? ????, ??? ???? ?????. ?? ??? ??? ????." },
+        2: { title: "???", desc: "??? ????, ??? ?????. ??? ??? ??? ??? ????." },
+        3: { title: "????/????", desc: "????? ????, ????? ??????. ???? ??? ??? ????." },
+        4: { title: "??/?? ???", desc: "?? ??, ?? ??. ??? ??? ?? ?? ?????." }
       },
       cta: {
-        title: "첫 번째 캔버스, 지금 시작하세요",
-        note: "가입 없이 게스트로 체험. 데이터는 안전합니다.",
-        button: "첫 번째 캔버스 시작"
+        title: "? ?? ???, ?? ?????",
+        note: "?? ?? ???? ??. ???? ?????.",
+        button: "? ?? ??? ??"
       },
       footer: {
-        tagline: "사색가를 위해",
-        privacy: "개인정보 처리방침",
-        terms: "이용약관",
-        contact: "문의하기"
+        tagline: "???? ??",
+        privacy: "???? ????",
+        terms: "????",
+        contact: "????"
       }
     }
   };
@@ -276,7 +276,9 @@ const I18nSystem = (() => {
       xhr.onload = () => {
         if (xhr.status === 200 || xhr.status === 0) {
           try {
-            resolve(JSON.parse(xhr.responseText));
+            // Strip BOM if present
+            const text = xhr.responseText.replace(/^\uFEFF/, '');
+            resolve(JSON.parse(text));
           } catch (e) {
             reject(new Error(`JSON parse error for ${url}`));
           }
@@ -443,6 +445,13 @@ const I18nSystem = (() => {
         from_lang: previousLang,
         to_lang: lang
       });
+    }
+
+    // Announce to screen readers
+    const announcer = document.getElementById('sr-announcements');
+    if (announcer) {
+      const langNames = { zh: '中文', en: 'English', ja: '日本語', ko: '한국어' };
+      announcer.textContent = 'Language switched to ' + (langNames[lang] || lang);
     }
 
     console.log(`[i18n] Successfully switched to ${lang}`);

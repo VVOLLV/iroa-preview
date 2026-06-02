@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -8,28 +8,27 @@
   <meta property="og:title" content="Roa - 让思考，有地方落脚">
   <meta property="og:description" content="Roa 是一块会思考的画布。你在这里不只是记录，而是探索。">
   <meta property="og:type" content="website">
-  
-  <!-- Fonts -->
+  <meta property="og:image" content="/assets/og-image.png">
+  <meta name="theme-color" content="#FDF7F3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1E1A17" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- GSAP + ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Skip to main content for accessibility -->
+  <div id="sr-announcements" aria-live="polite" aria-atomic="true" class="sr-only"></div>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Navigation -->
-  <nav id="navbar" class="navbar">
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-content">
       <a href="#" class="nav-logo">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -38,18 +37,19 @@
         </svg>
         <span>Roa</span>
       </a>
-      
+      <button class="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
       <div class="nav-controls">
-        <!-- Language Switcher -->
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="zh">中</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="ja">日</button>
-          <button class="lang-btn" data-lang="ko">한</button>
+        <div class="lang-switcher" role="group" aria-label="Language selection">
+          <button class="lang-btn active" data-lang="zh" aria-pressed="true">中</button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+          <button class="lang-btn" data-lang="ja" aria-pressed="false">日</button>
+          <button class="lang-btn" data-lang="ko" aria-pressed="false">한</button>
         </div>
-        
-        <!-- Theme Switcher -->
-        <div class="theme-switcher">
+        <div class="theme-switcher" role="group" aria-label="Theme selection">
           <button class="theme-btn active" data-theme="light" title="Light">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="5"/>
@@ -70,11 +70,7 @@
           </button>
           <button class="theme-btn" data-theme="random" title="Random">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="4" y="4" width="16" height="16" rx="2"/>
-              <circle cx="8" cy="8" r="1.5" fill="currentColor"/>
-              <circle cx="16" cy="8" r="1.5" fill="currentColor"/>
-              <circle cx="8" cy="16" r="1.5" fill="currentColor"/>
-              <circle cx="16" cy="16" r="1.5" fill="currentColor"/>
+              <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5Z" fill="currentColor"/>
             </svg>
           </button>
         </div>
@@ -82,172 +78,98 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <main id="main-content"><section id="hero" class="hero">
-    <canvas id="hero-canvas" class="hero-canvas"></canvas>
-    <div class="hero-content">
-      <h1 class="hero-title" data-i18n="hero.title">让思考，有地方落脚</h1>
-      <p class="hero-subtitle" data-i18n="hero.subtitle">Roa 是一块会思考的画布。你在这里不只是记录，而是探索。</p>
-      <div class="hero-cta">
-        <a href="#" class="btn btn-primary" data-i18n="hero.cta">开始我的第一块画布</a>
-        <a href="#features" class="btn btn-secondary" data-i18n="hero.cta-secondary">先看看它能做什么</a>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <div class="scroll-mouse">
-        <div class="scroll-wheel"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="section features">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title" data-i18n="features.title">它能做什么</h2>
-        <p class="section-subtitle" data-i18n="features.subtitle">三个让你惊喜的能力</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card" data-feature="1">
-          <div class="feature-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
-              <path d="M18 24L22 28L30 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3 class="feature-title" data-i18n="feature.1.title">思考，终于有了形状</h3>
-          <p class="feature-desc" data-i18n="feature.1.desc">节点和连线让抽象的想法变得可见、可触、可重组。</p>
-        </div>
-        <div class="feature-card" data-feature="2">
-          <div class="feature-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
-              <path d="M24 16V32M16 24H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="feature-title" data-i18n="feature.2.title">AI 不打断你，它等你</h3>
-          <p class="feature-desc" data-i18n="feature.2.desc">AI 在你需要时出现，在你思考时沉默。它尊重你的节奏。</p>
-        </div>
-        <div class="feature-card" data-feature="3">
-          <div class="feature-icon">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
-              <path d="M16 20L24 28L32 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3 class="feature-title" data-i18n="feature.3.title">大局与细节，同时看见</h3>
-          <p class="feature-desc" data-i18n="feature.3.desc">缩放自如，既能看到森林，也能看清每一片叶子。</p>
+  <main id="main-content">
+    <section id="hero" class="hero">
+      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+      <div class="hero-content">
+        <h1 class="hero-title" data-i18n="hero.title">让思考，有地方落脚</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Roa 是一块会思考的画布。你在这里不只是记录，而是探索。</p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn-primary" data-i18n="hero.cta" role="button">开始我的第一块画布</a>
+          <a href="#features" class="btn btn-secondary" data-i18n="hero.cta-secondary">先看看它能做什么</a>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="scroll-indicator">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      </div>
+    </section>
 
-  <!-- Philosophy Section - Clean AI & Brand Design -->
-  <section id="philosophy" class="section philosophy">
-    <!-- Background -->
-    <div class="philosophy-bg">
-      <div class="philosophy-gradient"></div>
-    </div>
-    
-    <!-- Large background text -->
-    <div class="philosophy-bg-text">
-      <span class="bg-text-roa">ROA</span>
-      <span class="bg-text-ai">AI</span>
-    </div>
-    
-    <!-- Circular SVG decoration -->
-    <svg class="philosophy-circle-svg" viewBox="0 0 500 500" fill="none">
-      <circle cx="250" cy="250" r="200" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
-      <circle cx="250" cy="250" r="150" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
-      <circle cx="250" cy="250" r="100" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
-      <circle cx="250" cy="250" r="50" stroke="currentColor" stroke-width="1" opacity="0.2"/>
-      <line x1="250" y1="50" x2="250" y2="450" stroke="currentColor" stroke-width="0.3" opacity="0.1"/>
-      <line x1="50" y1="250" x2="450" y2="250" stroke="currentColor" stroke-width="0.3" opacity="0.1"/>
-      <circle cx="250" cy="250" r="4" fill="currentColor" opacity="0.3"/>
-    </svg>
-    
-    <!-- Main content -->
-    <div class="philosophy-content">
-      <!-- Brand identifier -->
-      <div class="philosophy-brand" data-i18n="philosophy.label">THINKING SPACE</div>
-      
-      <!-- Title -->
-      <h2 class="philosophy-title">
-        <span class="philosophy-line" data-i18n="philosophy.line1">思考，是一种</span>
-        <span class="philosophy-line philosophy-highlight" data-i18n="philosophy.line2">需要空间的</span>
-        <span class="philosophy-line" data-i18n="philosophy.line3">活动。</span>
-      </h2>
-      
-      <!-- AI Badge -->
-      <div class="philosophy-ai">
-        <span class="ai-letter">A</span>
-        <span class="ai-letter">I</span>
-        <span class="ai-dot"></span>
+    <section id="features" class="section features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="features-title" class="section-title" data-i18n="features.title">它能做什么</h2>
+          <p class="section-subtitle" data-i18n="features.subtitle">三个让你惊喜的能力</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card" data-feature="1">
+            <div class="feature-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="16" r="6" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="32" r="6" stroke="currentColor" stroke-width="2"/><line x1="20" y1="18" x2="28" y2="18" stroke="currentColor" stroke-width="2"/><line x1="18" y1="20" x2="22" y2="28" stroke="currentColor" stroke-width="2"/><line x1="30" y1="20" x2="26" y2="28" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3 class="feature-title" data-i18n="feature.1.title">思考，终于有了形状</h3>
+            <p class="feature-desc" data-i18n="feature.1.desc">节点和连线让抽象的想法变得可见、可触、可重组。</p>
+          </div>
+          <div class="feature-card" data-feature="2">
+            <div class="feature-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 8C15.163 8 8 15.163 8 24s7.163 16 16 16 16-7.163 16-16S32.837 8 24 8z" stroke="currentColor" stroke-width="2"/><path d="M24 16v8l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3 class="feature-title" data-i18n="feature.2.title">AI 不打断你，它等你</h3>
+            <p class="feature-desc" data-i18n="feature.2.desc">AI 在你需要时出现，在你思考时沉默。它尊重你的节奏。</p>
+          </div>
+          <div class="feature-card" data-feature="3">
+            <div class="feature-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/><line x1="24" y1="8" x2="24" y2="14" stroke="currentColor" stroke-width="2"/><line x1="24" y1="34" x2="24" y2="40" stroke="currentColor" stroke-width="2"/><line x1="8" y1="24" x2="14" y2="24" stroke="currentColor" stroke-width="2"/><line x1="34" y1="24" x2="40" y2="24" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3 class="feature-title" data-i18n="feature.3.title">大局与细节，同时看见</h3>
+            <p class="feature-desc" data-i18n="feature.3.desc">缩放自如，既能看到森林，也能看清每一片叶子。</p>
+          </div>
+        </div>
       </div>
-      
-      <!-- Subtitle -->
-      <p class="philosophy-subtitle">
-        <span class="philosophy-sub-line" data-i18n="philosophy.sub1">我们为它</span>
-        <span class="philosophy-sub-line philosophy-accent" data-i18n="philosophy.sub2">建了一个家</span>
-      </p>
-      
-      <!-- Domain -->
-      <div class="philosophy-domain">
-        <span class="domain-text">iroa.im</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Scenarios Section -->
-  <section id="scenarios" class="section scenarios">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title" data-i18n="scenarios.title">谁在用它</h2>
-        <p class="section-subtitle" data-i18n="scenarios.subtitle">四种人，同一个需求</p>
-      </div>
-      <div class="scenarios-track">
+    
+    <section id="scenarios" class="section scenarios" aria-labelledby="scenarios-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="scenarios-title" class="section-title" data-i18n="scenarios.title">谁在用它</h2>
+          <p class="section-subtitle" data-i18n="scenarios.subtitle">四种人，同一个需求</p>
+        </div>
         <div class="scenarios-grid">
           <div class="scenario-card" data-scenario="1">
-            <div class="scenario-avatar">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
-                <circle cx="32" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
-                <path d="M16 48C16 38.0589 23.1634 30 32 30C40.8366 30 48 38.0589 48 48" stroke="currentColor" stroke-width="2"/>
+            <div class="scenario-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="24" cy="16" r="8"/>
+                <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16"/>
+                <path d="M30 12l6-6M36 12l-6-6" stroke-linecap="round"/>
               </svg>
             </div>
             <h3 class="scenario-title" data-i18n="scenario.1.title">知识工作者</h3>
             <p class="scenario-desc" data-i18n="scenario.1.desc">组织复杂信息，并行探索方案。在混乱中找到秩序。</p>
           </div>
           <div class="scenario-card" data-scenario="2">
-            <div class="scenario-avatar">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
-                <rect x="20" y="18" width="24" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
-                <line x1="24" y1="26" x2="40" y2="26" stroke="currentColor" stroke-width="2"/>
-                <line x1="24" y1="32" x2="40" y2="32" stroke="currentColor" stroke-width="2"/>
-                <line x1="24" y1="38" x2="36" y2="38" stroke="currentColor" stroke-width="2"/>
+            <div class="scenario-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="10" y="6" width="28" height="36" rx="3"/>
+                <line x1="16" y1="16" x2="32" y2="16"/>
+                <line x1="16" y1="22" x2="32" y2="22"/>
+                <line x1="16" y1="28" x2="28" y2="28"/>
+                <line x1="16" y1="34" x2="24" y2="34"/>
               </svg>
             </div>
             <h3 class="scenario-title" data-i18n="scenario.2.title">研究者</h3>
             <p class="scenario-desc" data-i18n="scenario.2.desc">整理文献，对比实验。节点和连线承载你的上下文。</p>
           </div>
           <div class="scenario-card" data-scenario="3">
-            <div class="scenario-avatar">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
-                <rect x="18" y="20" width="28" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
-                <path d="M26 28L30 32L38 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <div class="scenario-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="6" y="10" width="36" height="24" rx="3"/>
+                <circle cx="18" cy="22" r="4"/>
+                <path d="M30 18l4 4-8 4"/>
+                <line x1="6" y1="38" x2="18" y2="38" stroke-linecap="round"/>
               </svg>
             </div>
             <h3 class="scenario-title" data-i18n="scenario.3.title">产品/设计师</h3>
             <p class="scenario-desc" data-i18n="scenario.3.desc">拆解需求，可视化流程。拖拽和连线让你感到自由。</p>
           </div>
           <div class="scenario-card" data-scenario="4">
-            <div class="scenario-avatar">
-              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-                <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
-                <path d="M24 20V44M32 20V44M40 20V44" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M20 28H44" stroke="currentColor" stroke-width="2"/>
+            <div class="scenario-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 8v32M24 8v32M34 8v32" stroke-linecap="round"/>
+                <line x1="8" y1="20" x2="40" y2="20"/>
+                <circle cx="24" cy="30" r="3" fill="currentColor"/>
               </svg>
             </div>
             <h3 class="scenario-title" data-i18n="scenario.4.title">学生/终身学习者</h3>
@@ -255,57 +177,427 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section id="cta" class="section cta">
-    <div class="container">
-      <div class="cta-content">
-        <h2 class="cta-title" data-i18n="cta.title">你的第一块画布，现在就可以开始</h2>
-        <p class="cta-note" data-i18n="cta.note">无需注册，游客模式直接体验。你的想法不会丢失。</p>
-        <a href="#" class="btn btn-primary btn-large" data-i18n="cta.button">开始我的第一块画布</a>
-      </div>
-    </div>
-  </section>
+    
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+                  <!-- Philosophy Brand Statement -->
+          <div class="footer-philosophy">
+            <p class="footer-philosophy-line">
+              <span class="fp-think">Think in</span>
+              <span class="fp-space">S</span><span class="fp-space fp-up">P</span><span class="fp-space">A</span><span class="fp-space fp-up">C</span><span class="fp-space">E</span><span class="fp-comma">,</span>
+              <span class="fp-not">not in lines.</span>
+            </p>
+          </div>
+          <!-- Footer Top: Main columns -->
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#" class="footer-logo">
+              <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/><path d="M10 16C10 12.6863 12.6863 10 16 10C19.3137 10 22 12.6863 22 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>Roa</span>
+            </a>
+            <p class="footer-tagline" data-i18n="footer.tagline">为思考者而建</p>
+            <p class="footer-desc">AI 原生思维工具，让思考更自然、更有序、更有温度。</p>
+          </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <a href="#" class="footer-logo">
-            <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
-              <path d="M10 16C10 12.6863 12.6863 10 16 10C19.3137 10 22 12.6863 22 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <div class="footer-column">
+            <h4 class="footer-col-title">产品</h4>
+            <ul class="footer-link-list">
+              <li><a href="#">功能介绍</a></li>
+              <li><a href="#">更新日志</a></li>
+              <li><a href="#">使用指南</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="footer-col-title">关于</h4>
+            <ul class="footer-link-list">
+              <li><a href="#">关于 Roa</a></li>
+              <li><a href="#">联系方式</a></li>
+                          </ul>
+          </div>
+        </div>
+
+        <!-- Friend Links Section -->
+        <div class="footer-friends">
+          <h4 class="footer-friends-title">友情链接</h4>
+          <div class="footer-friends-grid">
+            <!-- AI 对话产品 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">AI 对话产品</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">ChatGPT</a>
+                <a class="hot" href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">Gemini</a>
+                <a class="hot" href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude</a>
+                <a class="hot" href="https://www.doubao.com" target="_blank" rel="noopener noreferrer">豆包</a>
+                <a class="hot" href="https://kimi.moonshot.cn" target="_blank" rel="noopener noreferrer">Kimi</a>
+                <a class="hot" href="https://chat.deepseek.com" target="_blank" rel="noopener noreferrer">DeepSeek</a>
+                <a href="https://tongyi.aliyun.com" target="_blank" rel="noopener noreferrer">通义千问</a>
+                <a href="https://yiyan.baidu.com" target="_blank" rel="noopener noreferrer">文心一言</a>
+                <a class="hot" href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">Perplexity</a>
+                <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer">Copilot</a>
+                <a href="https://chatglm.cn" target="_blank" rel="noopener noreferrer">ChatGLM</a>
+                <a href="https://hunyuan.tencent.com" target="_blank" rel="noopener noreferrer">混元</a>
+                <a href="https://www.baichuan-ai.com" target="_blank" rel="noopener noreferrer">百川</a>
+                <a href="https://xinghuo.xfyun.cn" target="_blank" rel="noopener noreferrer">讯飞星火</a>
+                <a href="https://pi.ai" target="_blank" rel="noopener noreferrer">Pi</a>
+                <a href="https://poe.com" target="_blank" rel="noopener noreferrer">Poe</a>
+                <a href="https://you.com" target="_blank" rel="noopener noreferrer">You.com</a>
+                <a href="https://character.ai" target="_blank" rel="noopener noreferrer">Character.AI</a>
+                <a href="https://www.minimaxi.com" target="_blank" rel="noopener noreferrer">MiniMax</a>
+                <a href="https://meta.ai" target="_blank" rel="noopener noreferrer">Meta AI</a>
+              </div>
+            </div>
+
+            <!-- API 开放平台 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">API 开放平台</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://platform.openai.com" target="_blank" rel="noopener noreferrer">OpenAI Platform</a>
+                <a href="https://ai.google.dev" target="_blank" rel="noopener noreferrer">Google AI Studio</a>
+                <a class="hot" href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer">Anthropic</a>
+                <a class="hot" href="https://platform.deepseek.com" target="_blank" rel="noopener noreferrer">DeepSeek API</a>
+                <a href="https://open.bigmodel.cn" target="_blank" rel="noopener noreferrer">智谱 AI</a>
+                <a href="https://cloud.baidu.com/qianfan" target="_blank" rel="noopener noreferrer">百度千帆</a>
+                <a href="https://dashscope.aliyun.com" target="_blank" rel="noopener noreferrer">通义灵犀</a>
+                <a class="hot" href="https://cloud.siliconflow.cn" target="_blank" rel="noopener noreferrer">硅基流动</a>
+                <a href="https://www.moonshot.cn" target="_blank" rel="noopener noreferrer">Moonshot API</a>
+                <a class="hot" href="https://huggingface.co" target="_blank" rel="noopener noreferrer">Hugging Face</a>
+                <a href="https://replicate.com" target="_blank" rel="noopener noreferrer">Replicate</a>
+                <a href="https://together.ai" target="_blank" rel="noopener noreferrer">Together AI</a>
+                <a href="https://fireworks.ai" target="_blank" rel="noopener noreferrer">Fireworks AI</a>
+                <a class="hot" href="https://groq.com" target="_blank" rel="noopener noreferrer">Groq</a>
+                <a href="https://mistral.ai" target="_blank" rel="noopener noreferrer">Mistral AI</a>
+                <a href="https://aws.amazon.com/bedrock" target="_blank" rel="noopener noreferrer">AWS Bedrock</a>
+                <a href="https://azure.microsoft.com/ai-services" target="_blank" rel="noopener noreferrer">Azure AI</a>
+                <a href="https://cloud.google.com/vertex-ai" target="_blank" rel="noopener noreferrer">Vertex AI</a>
+                <a href="https://cohere.com" target="_blank" rel="noopener noreferrer">Cohere</a>
+                <a href="https://ai21.com" target="_blank" rel="noopener noreferrer">AI21 Labs</a>
+              </div>
+            </div>
+
+            <!-- AI 工具与应用 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">AI 工具与应用</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://midjourney.com" target="_blank" rel="noopener noreferrer">Midjourney</a>
+                <a class="hot" href="https://www.cursor.com" target="_blank" rel="noopener noreferrer">Cursor</a>
+                <a href="https://notion.so" target="_blank" rel="noopener noreferrer">Notion</a>
+                <a href="https://figma.com" target="_blank" rel="noopener noreferrer">Figma</a>
+                <a href="https://linear.app" target="_blank" rel="noopener noreferrer">Linear</a>
+                <a href="https://replit.com" target="_blank" rel="noopener noreferrer">Replit</a>
+                <a class="hot" href="https://v0.dev" target="_blank" rel="noopener noreferrer">v0</a>
+                <a class="hot" href="https://bolt.new" target="_blank" rel="noopener noreferrer">Bolt</a>
+                <a href="https://www.grammarly.com" target="_blank" rel="noopener noreferrer">Grammarly</a>
+                <a href="https://jasper.ai" target="_blank" rel="noopener noreferrer">Jasper</a>
+                <a href="https://www.copy.ai" target="_blank" rel="noopener noreferrer">Copy.ai</a>
+                <a class="hot" href="https://runwayml.com" target="_blank" rel="noopener noreferrer">Runway</a>
+                <a href="https://canva.com" target="_blank" rel="noopener noreferrer">Canva AI</a>
+                <a href="https://tome.app" target="_blank" rel="noopener noreferrer">Tome</a>
+                <a href="https://gamma.app" target="_blank" rel="noopener noreferrer">Gamma</a>
+                <a href="https://otter.ai" target="_blank" rel="noopener noreferrer">Otter.ai</a>
+                <a href="https://fireflies.ai" target="_blank" rel="noopener noreferrer">Fireflies</a>
+              </div>
+            </div>
+
+            <!-- AI 编程与开发 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">AI 编程与开发</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</a>
+                <a class="hot" href="https://www.windsurf.com" target="_blank" rel="noopener noreferrer">Windsurf</a>
+                <a href="https://aider.chat" target="_blank" rel="noopener noreferrer">Aider</a>
+                <a href="https://devin.ai" target="_blank" rel="noopener noreferrer">Devin</a>
+                <a href="https://codium.ai" target="_blank" rel="noopener noreferrer">CodiumAI</a>
+                <a href="https://www.langchain.com" target="_blank" rel="noopener noreferrer">LangChain</a>
+                <a href="https://www.llamaindex.ai" target="_blank" rel="noopener noreferrer">LlamaIndex</a>
+                <a href="https://streamlit.io" target="_blank" rel="noopener noreferrer">Streamlit</a>
+                <a href="https://gradio.app" target="_blank" rel="noopener noreferrer">Gradio</a>
+                <a class="hot" href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel</a>
+                <a href="https://supabase.com" target="_blank" rel="noopener noreferrer">Supabase</a>
+                <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>
+                <a href="https://www.lovable.dev" target="_blank" rel="noopener noreferrer">Lovable</a>
+                <a href="https://tempolabs.ai" target="_blank" rel="noopener noreferrer">Tempo</a>
+                <a href="https://www.firebase.google.com" target="_blank" rel="noopener noreferrer">Firebase</a>
+                <a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer">Cloudflare</a>
+              </div>
+            </div>
+
+            <!-- AI 图像与视觉 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">AI 图像与视觉</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://stability.ai" target="_blank" rel="noopener noreferrer">Stability AI</a>
+                <a href="https://leonardo.ai" target="_blank" rel="noopener noreferrer">Leonardo AI</a>
+                <a href="https://www.adobe.com/products/firefly.html" target="_blank" rel="noopener noreferrer">Adobe Firefly</a>
+                <a href="https://clipdrop.co" target="_blank" rel="noopener noreferrer">Clipdrop</a>
+                <a href="https://www.remove.bg" target="_blank" rel="noopener noreferrer">Remove.bg</a>
+                <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash AI</a>
+                <a class="hot" href="https://pika.art" target="_blank" rel="noopener noreferrer">Pika</a>
+                <a class="hot" href="https://klingai.com" target="_blank" rel="noopener noreferrer">可灵</a>
+                <a href="https://jimeng.jianying.com" target="_blank" rel="noopener noreferrer">即梦</a>
+                <a href="https://tongyi.aliyun.com/wanxiang" target="_blank" rel="noopener noreferrer">通义万相</a>
+                <a href="https://www.artbreeder.com" target="_blank" rel="noopener noreferrer">Artbreeder</a>
+                <a class="hot" href="https://lumalabs.ai" target="_blank" rel="noopener noreferrer">Luma AI</a>
+                <a href="https://www.meshy.ai" target="_blank" rel="noopener noreferrer">Meshy</a>
+                <a href="https://tripo3d.ai" target="_blank" rel="noopener noreferrer">Tripo3D</a>
+                <a href="https://www.hailuoai.video" target="_blank" rel="noopener noreferrer">海螺AI</a>
+                <a href="https://www.domo.ai" target="_blank" rel="noopener noreferrer">Domo AI</a>
+              </div>
+            </div>
+
+            <!-- 开源模型与社区 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">开源模型与社区</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://ollama.com" target="_blank" rel="noopener noreferrer">Ollama</a>
+                <a href="https://lmstudio.ai" target="_blank" rel="noopener noreferrer">LM Studio</a>
+                <a href="https://openrouter.ai" target="_blank" rel="noopener noreferrer">OpenRouter</a>
+                <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer">Open WebUI</a>
+                <a href="https://comfyui.com" target="_blank" rel="noopener noreferrer">ComfyUI</a>
+                <a href="https://automatic1111.com" target="_blank" rel="noopener noreferrer">SD WebUI</a>
+                <a href="https://coze.com" target="_blank" rel="noopener noreferrer">Coze</a>
+                <a href="https://maxai.me" target="_blank" rel="noopener noreferrer">MaxAI</a>
+                <a href="https://lobehub.com" target="_blank" rel="noopener noreferrer">LobeChat</a>
+                <a href="https://chatboxai.app" target="_blank" rel="noopener noreferrer">ChatBox</a>
+                <a href="https://jan.ai" target="_blank" rel="noopener noreferrer">Jan</a>
+                <a href="https://msty.app" target="_blank" rel="noopener noreferrer">Msty</a>
+                <a href="https://text-generation-webui.com" target="_blank" rel="noopener noreferrer">text-gen-webui</a>
+              </div>
+            </div>
+
+            <!-- AI 学习与研究 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">AI 学习与研究</h5>
+              <div class="friend-links">
+                <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                <a href="https://www.semanticscholar.org" target="_blank" rel="noopener noreferrer">Semantic Scholar</a>
+                <a href="https://consensus.app" target="_blank" rel="noopener noreferrer">Consensus</a>
+                <a href="https://elicit.com" target="_blank" rel="noopener noreferrer">Elicit</a>
+                <a href="https://typeset.io" target="_blank" rel="noopener noreferrer">SciSpace</a>
+                <a href="https://www.coursera.org" target="_blank" rel="noopener noreferrer">Coursera</a>
+                <a href="https://www.deeplearning.ai" target="_blank" rel="noopener noreferrer">DeepLearning.AI</a>
+                <a href="https://www.kaggle.com" target="_blank" rel="noopener noreferrer">Kaggle</a>
+                <a href="https://wandb.ai" target="_blank" rel="noopener noreferrer">W&B</a>
+                <a href="https://paperswithcode.com" target="_blank" rel="noopener noreferrer">Papers with Code</a>
+                <a href="https://huggingface.co/papers" target="_blank" rel="noopener noreferrer">HF Daily Papers</a>
+                <a href="https://www.36kr.com/information/AI" target="_blank" rel="noopener noreferrer">36Kr AI</a>
+                <a href="https://jiqizhixin.com" target="_blank" rel="noopener noreferrer">机器之心</a>
+                <a href="https://www.qbitai.com" target="_blank" rel="noopener noreferrer">量子位</a>
+              </div>
+            </div>
+
+            <!-- AI 期刊与资讯 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">AI 期刊与资讯</h5>
+              <div class="friend-links">
+                <a href="https://www.nature.com/natmachintell" target="_blank" rel="noopener noreferrer">Nature Machine Intelligence</a>
+                <a href="https://www.science.org/journal/robotics" target="_blank" rel="noopener noreferrer">Science Robotics</a>
+                <a href="https://jmlr.org" target="_blank" rel="noopener noreferrer">JMLR</a>
+                <a href="https://arxiv.org/list/cs.AI/recent" target="_blank" rel="noopener noreferrer">arXiv cs.AI</a>
+                <a href="https://arxiv.org/list/cs.CL/recent" target="_blank" rel="noopener noreferrer">arXiv cs.CL</a>
+                <a href="https://arxiv.org/list/cs.CV/recent" target="_blank" rel="noopener noreferrer">arXiv cs.CV</a>
+                <a href="https://neurips.cc" target="_blank" rel="noopener noreferrer">NeurIPS</a>
+                <a href="https://icml.cc" target="_blank" rel="noopener noreferrer">ICML</a>
+                <a href="https://iclr.cc" target="_blank" rel="noopener noreferrer">ICLR</a>
+                <a href="https://2024.aclweb.org" target="_blank" rel="noopener noreferrer">ACL</a>
+                <a href="https://cvpr.thecvf.com" target="_blank" rel="noopener noreferrer">CVPR</a>
+                <a href="https://www.aaai.org" target="_blank" rel="noopener noreferrer">AAAI</a>
+                <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" rel="noopener noreferrer">IEEE TPAMI</a>
+                <a href="https://www.sciencedirect.com/journal/artificial-intelligence" target="_blank" rel="noopener noreferrer">Artificial Intelligence</a>
+                <a href="https://www.technologyreview.com/topic/artificial-intelligence" target="_blank" rel="noopener noreferrer">MIT Tech Review</a>
+                <a href="https://www.deeplearning.ai/the-batch" target="_blank" rel="noopener noreferrer">The Batch</a>
+                <a href="https://jack-clark.net" target="_blank" rel="noopener noreferrer">Import AI</a>
+                <a href="https://buttondown.com/ainews" target="_blank" rel="noopener noreferrer">AI News</a>
+                <a href="https://www.interconnects.ai" target="_blank" rel="noopener noreferrer">Interconnects</a>
+                <a href="https://lilianweng.github.io" target="_blank" rel="noopener noreferrer">Lil'Log</a>
+              </div>
+            </div>
+
+            <!-- 世界模型与空间智能 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">世界模型与空间智能</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://worldlabs.ai" target="_blank" rel="noopener noreferrer">World Labs</a>
+                <a href="https://wayve.ai" target="_blank" rel="noopener noreferrer">Wayve</a>
+                <a href="https://waabi.com" target="_blank" rel="noopener noreferrer">Waabi</a>
+                <a class="hot" href="https://deepmind.google/discover/blog" target="_blank" rel="noopener noreferrer">DeepMind</a>
+                <a class="hot" href="https://sora.com" target="_blank" rel="noopener noreferrer">Sora</a>
+                <a href="https://lumalabs.ai/dream-machine" target="_blank" rel="noopener noreferrer">Luma Dream Machine</a>
+                <a href="https://developer.nvidia.com/omniverse" target="_blank" rel="noopener noreferrer">NVIDIA Omniverse</a>
+                <a href="https://cesium.com" target="_blank" rel="noopener noreferrer">Cesium</a>
+                <a href="https://threejs.org" target="_blank" rel="noopener noreferrer">Three.js</a>
+                <a href="https://unity.com" target="_blank" rel="noopener noreferrer">Unity</a>
+                <a href="https://www.unrealengine.com" target="_blank" rel="noopener noreferrer">Unreal Engine</a>
+                <a href="https://www.nuscenes.org" target="_blank" rel="noopener noreferrer">nuScenes</a>
+                <a href="https://waymo.com" target="_blank" rel="noopener noreferrer">Waymo</a>
+                <a href="https://www.tesla.com/ai" target="_blank" rel="noopener noreferrer">Tesla AI</a>
+                <a href="https://genesis-world.com" target="_blank" rel="noopener noreferrer">Genesis</a>
+                <a href="https://www.physicalintelligence.company" target="_blank" rel="noopener noreferrer">Physical Intelligence</a>
+                <a href="https://covariant.ai" target="_blank" rel="noopener noreferrer">Covariant</a>
+                <a href="https://www.figure.ai" target="_blank" rel="noopener noreferrer">Figure</a>
+                <a href="https://www.bostondynamics.com" target="_blank" rel="noopener noreferrer">Boston Dynamics</a>
+                <a href="https://www.1x.tech" target="_blank" rel="noopener noreferrer">1X Technologies</a>
+              </div>
+            </div>
+
+            <!-- AI 加速硬件 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">AI 加速硬件</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener noreferrer">NVIDIA</a>
+                <a href="https://www.amd.com/en/ai" target="_blank" rel="noopener noreferrer">AMD Instinct</a>
+                <a href="https://www.intel.com/ai" target="_blank" rel="noopener noreferrer">Intel Gaudi</a>
+                <a href="https://cloud.google.com/tpu" target="_blank" rel="noopener noreferrer">Google TPU</a>
+                <a href="https://aws.amazon.com/machine-learning/trainium/" target="_blank" rel="noopener noreferrer">AWS Trainium</a>
+                <a href="https://aws.amazon.com/machine-learning/inferentia/" target="_blank" rel="noopener noreferrer">AWS Inferentia</a>
+                <a href="https://www.microsoft.com/en-us/azure/maia" target="_blank" rel="noopener noreferrer">Microsoft Maia</a>
+                <a href="https://cloud.google.com/tensor-processing-unit" target="_blank" rel="noopener noreferrer">Coral Edge TPU</a>
+                <a href="https://www.cerebras.net" target="_blank" rel="noopener noreferrer">Cerebras</a>
+                <a class="hot" href="https://groq.com" target="_blank" rel="noopener noreferrer">Groq LPU</a>
+                <a href="https://www.sambanova.ai" target="_blank" rel="noopener noreferrer">SambaNova</a>
+                <a href="https://www.tenstorrent.com" target="_blank" rel="noopener noreferrer">Tenstorrent</a>
+                <a href="https://www.graphcore.ai" target="_blank" rel="noopener noreferrer">Graphcore</a>
+                <a href="https://www.hailo.ai" target="_blank" rel="noopener noreferrer">Hailo</a>
+                <a href="https://www.d-matrix.ai" target="_blank" rel="noopener noreferrer">d-Matrix</a>
+                <a href="https://www.etched.com" target="_blank" rel="noopener noreferrer">Etched</a>
+              </div>
+            </div>
+
+            <!-- 深度学习框架 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">深度学习框架</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://pytorch.org" target="_blank" rel="noopener noreferrer">PyTorch</a>
+                <a class="hot" href="https://www.tensorflow.org" target="_blank" rel="noopener noreferrer">TensorFlow</a>
+                <a href="https://jax.readthedocs.io" target="_blank" rel="noopener noreferrer">JAX</a>
+                <a href="https://keras.io" target="_blank" rel="noopener noreferrer">Keras</a>
+                <a href="https://www.paddlepaddle.org.cn" target="_blank" rel="noopener noreferrer">PaddlePaddle</a>
+                <a href="https://www.mindspore.cn" target="_blank" rel="noopener noreferrer">MindSpore</a>
+                <a href="https://oneflow.org" target="_blank" rel="noopener noreferrer">OneFlow</a>
+                <a href="https://mxnet.apache.org" target="_blank" rel="noopener noreferrer">MXNet</a>
+                <a class="hot" href="https://huggingface.co/docs/transformers" target="_blank" rel="noopener noreferrer">Transformers</a>
+                <a href="https://github.com/microsoft/DeepSpeed" target="_blank" rel="noopener noreferrer">DeepSpeed</a>
+                <a href="https://github.com/NVIDIA/Megatron-LM" target="_blank" rel="noopener noreferrer">Megatron-LM</a>
+                <a href="https://colossalai.org" target="_blank" rel="noopener noreferrer">ColossalAI</a>
+                <a href="https://github.com/vllm-project/vllm" target="_blank" rel="noopener noreferrer">vLLM</a>
+                <a href="https://huggingface.co/docs/text-generation-inference" target="_blank" rel="noopener noreferrer">TGI</a>
+                <a href="https://onnx.ai" target="_blank" rel="noopener noreferrer">ONNX</a>
+                <a href="https://developer.nvidia.com/tensorrt" target="_blank" rel="noopener noreferrer">TensorRT</a>
+                <a href="https://docs.openvino.ai" target="_blank" rel="noopener noreferrer">OpenVINO</a>
+                <a href="https://developer.apple.com/machine-learning/core-ml/" target="_blank" rel="noopener noreferrer">CoreML</a>
+                <a href="https://ml-explore.github.io/mlx/" target="_blank" rel="noopener noreferrer">MLX</a>
+                <a href="https://flax.readthedocs.io" target="_blank" rel="noopener noreferrer">Flax</a>
+              </div>
+            </div>
+
+            <!-- AI Agent 平台 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">AI Agent 平台</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://www.coze.com" target="_blank" rel="noopener noreferrer">Coze</a>
+                <a class="hot" href="https://dify.ai" target="_blank" rel="noopener noreferrer">Dify</a>
+                <a href="https://fastgpt.in" target="_blank" rel="noopener noreferrer">FastGPT</a>
+                <a href="https://www.crewai.com" target="_blank" rel="noopener noreferrer">CrewAI</a>
+                <a href="https://microsoft.github.io/autogen/" target="_blank" rel="noopener noreferrer">AutoGen</a>
+                <a href="https://microsoft.github.io/semantic-kernel/" target="_blank" rel="noopener noreferrer">Semantic Kernel</a>
+                <a href="https://www.griptape.ai" target="_blank" rel="noopener noreferrer">Griptape</a>
+                <a href="https://phidata.com" target="_blank" rel="noopener noreferrer">Phidata</a>
+                <a href="https://haystack.deepset.ai" target="_blank" rel="noopener noreferrer">Haystack</a>
+                <a href="https://www.flowiseai.com" target="_blank" rel="noopener noreferrer">FlowiseAI</a>
+              </div>
+            </div>
+
+            <!-- AI 语音与音乐 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">AI 语音与音乐</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://suno.com" target="_blank" rel="noopener noreferrer">Suno</a>
+                <a href="https://www.udio.com" target="_blank" rel="noopener noreferrer">Udio</a>
+                <a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer">ElevenLabs</a>
+                <a href="https://openai.com/index/whisper/" target="_blank" rel="noopener noreferrer">Whisper</a>
+                <a href="https://www.descript.com" target="_blank" rel="noopener noreferrer">Descript</a>
+                <a href="https://www.murf.ai" target="_blank" rel="noopener noreferrer">Murf AI</a>
+                <a href="https://www.speechify.com" target="_blank" rel="noopener noreferrer">Speechify</a>
+                <a href="https://www.resemble.ai" target="_blank" rel="noopener noreferrer">Resemble AI</a>
+                <a href="https://www.play.ht" target="_blank" rel="noopener noreferrer">PlayHT</a>
+                <a href="https://www.heygen.com" target="_blank" rel="noopener noreferrer">HeyGen</a>
+                <a href="https://www.d-id.com" target="_blank" rel="noopener noreferrer">D-ID</a>
+                <a href="https://www.runwayml.com" target="_blank" rel="noopener noreferrer">Runway</a>
+                <a href="https://www.pika.art" target="_blank" rel="noopener noreferrer">Pika</a>
+                <a href="https://www.kling.ai" target="_blank" rel="noopener noreferrer">可灵</a>
+              </div>
+            </div>
+
+            <!-- 数据与向量数据库 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">数据与向量数据库</h5>
+              <div class="friend-links">
+                <a class="hot" href="https://www.pinecone.io" target="_blank" rel="noopener noreferrer">Pinecone</a>
+                <a href="https://www.weaviate.io" target="_blank" rel="noopener noreferrer">Weaviate</a>
+                <a href="https://www.trychroma.com" target="_blank" rel="noopener noreferrer">Chroma</a>
+                <a href="https://qdrant.tech" target="_blank" rel="noopener noreferrer">Qdrant</a>
+                <a href="https://www.mongodb.com/atlas/vector-search" target="_blank" rel="noopener noreferrer">MongoDB Atlas</a>
+                <a href="https://www.elastic.co/enterprise-search/vector-search" target="_blank" rel="noopener noreferrer">Elasticsearch</a>
+                <a href="https://supabase.com/docs/guides/ai" target="_blank" rel="noopener noreferrer">Supabase Vector</a>
+                <a href="https://milvus.io" target="_blank" rel="noopener noreferrer">Milvus</a>
+                <a href="https://www.zilliz.com" target="_blank" rel="noopener noreferrer">Zilliz</a>
+                <a href="https://www.lancedb.com" target="_blank" rel="noopener noreferrer">LanceDB</a>
+              </div>
+            </div>
+
+            <!-- MLOps 与部署 -->
+            <div class="footer-friend-group">
+              <h5 class="friend-group-label">MLOps 与部署</h5>
+              <div class="friend-links">
+                <a href="https://wandb.ai" target="_blank" rel="noopener noreferrer">Weights & Biases</a>
+                <a href="https://mlflow.org" target="_blank" rel="noopener noreferrer">MLflow</a>
+                <a href="https://www.comet.com" target="_blank" rel="noopener noreferrer">Comet ML</a>
+                <a href="https://www.bentoml.com" target="_blank" rel="noopener noreferrer">BentoML</a>
+                <a href="https://www.seldon.io" target="_blank" rel="noopener noreferrer">Seldon</a>
+                <a href="https://triton-inference-server.github.io" target="_blank" rel="noopener noreferrer">Triton Server</a>
+                <a href="https://www.ray.io" target="_blank" rel="noopener noreferrer">Ray</a>
+                <a href="https://www.anyscale.com" target="_blank" rel="noopener noreferrer">Anyscale</a>
+                <a href="https://modal.com" target="_blank" rel="noopener noreferrer">Modal</a>
+                <a href="https://runpod.io" target="_blank" rel="noopener noreferrer">RunPod</a>
+                <a href="https://www.lepton.ai" target="_blank" rel="noopener noreferrer">Lepton AI</a>
+                <a href="https://www.baseten.co" target="_blank" rel="noopener noreferrer">Baseten</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Expand/Collapse Button -->
+          <button class="friends-toggle" aria-expanded="false" aria-label="展开更多友情链接">
+            <span class="friends-toggle-text">展开更多</span>
+            <svg class="friends-toggle-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 6l4 4 4-4"/>
             </svg>
-            <span>Roa</span>
-          </a>
-          <p class="footer-tagline" data-i18n="footer.tagline">为思考者而建</p>
+          </button>
         </div>
-        <div class="footer-links">
-          <a href="#" data-i18n="footer.privacy">隐私政策</a>
-          <a href="#" data-i18n="footer.terms">使用条款</a>
-          <a href="#" data-i18n="footer.contact">联系我们</a>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <a href="#" data-i18n="footer.privacy">隐私政策</a>
+            <span class="footer-divider">·</span>
+            <a href="#" data-i18n="footer.terms">使用条款</a>
+          </div>
+          <p class="footer-copyright">&copy; 2026 Roa. All rights reserved.</p>
         </div>
-        <p class="footer-copyright">&copy; 2026 Roa. All rights reserved.</p>
       </div>
-    </div>
-  </footer>
+    </footer>
   </main>
 
-  <!-- Scripts -->
-  <script src="scripts/theme.js"></script>
-  <script src="scripts/i18n.js"></script>
-  <script src="scripts/cursor.js"></script>
-  <script src="scripts/scroll.js"></script>
-  <script src="scripts/analytics.js"></script>
-  <script src="scripts/main.js"></script>
-</body>
+  <script src="scripts/theme.js" defer></script>
+  <script src="scripts/i18n.js" defer></script>
+  <script src="scripts/scroll.js" defer></script>
+  <script src="scripts/analytics.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+
+    <!-- Floating CTA Button -->
+    <a href="#" class="floating-cta" id="floating-cta" data-i18n="cta.button" aria-label="开始体验">开始我的第一块画布</a>
+  </body>
 </html>
-
-
-
-
-
-
