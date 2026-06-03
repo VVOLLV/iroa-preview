@@ -5,8 +5,8 @@
    ============================================ */
 
 :root {
-  --font-heading: 'Lora', 'Noto Serif SC', 'Noto Serif JP', 'Noto Serif KR', serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Lora', 'Noto Serif SC', 'PingFang SC', 'Microsoft YaHei', 'Noto Serif JP', 'Hiragino Mincho Pro', 'Yu Mincho', 'Noto Serif KR', 'Batang', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans', 'Malgun Gothic', sans-serif;
   --transition-theme: 0.4s ease-out;
 }
 
@@ -419,9 +419,9 @@ img, svg {
   border-radius: 8px;
   padding: 40px 32px;
   border: 1px solid var(--color-border);
-  transition: all 0.4s ease-out;
-  opacity: 0;
-  transform: translateY(40px) rotate(2deg);
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .feature-card:hover {
@@ -2272,4 +2272,74 @@ img, svg {
   .hero-particle {
     display: none !important;
   }
+}
+
+/* ============================================
+   Scroll Reveal Animations (CSS-driven)
+   ============================================ */
+
+.scroll-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.scroll-reveal.is-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.hero-entrance {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero-entrance.is-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Safety: if JS never runs, show everything */
+.no-js .scroll-reveal,
+.no-js .hero-entrance {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ============================================
+   Navigation Back Button
+   ============================================ */
+
+.nav-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: var(--color-text-muted);
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+  margin-right: 4px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  flex-shrink: 0;
+}
+
+.nav-back:hover {
+  color: var(--color-text);
+  background-color: var(--color-bg-elevated);
+}
+
+.nav-back svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.feature-card.tilting,
+.scenario-card.tilting {
+  transition: transform 0.06s linear !important;
 }

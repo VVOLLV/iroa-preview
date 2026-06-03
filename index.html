@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh" data-theme="light">
+<html lang="zh" data-theme="light" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roa - 让思考，有地方落脚</title>
+  <title data-i18n="meta.title">Roa - ?????????</title>
   <meta name="description" content="Roa 是一块会思考的画布。你在这里不只是记录，而是探索。">
   <meta property="og:title" content="Roa - 让思考，有地方落脚">
   <meta property="og:description" content="Roa 是一块会思考的画布。你在这里不只是记录，而是探索。">
@@ -12,16 +12,7 @@
   <meta name="theme-color" content="#FDF7F3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1E1A17" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:wght@400;500;600&family=Noto+Serif+SC:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,7 +21,7 @@
 
   <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-content">
-      <a href="#" class="nav-logo">
+      <a href="/" class="nav-logo">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
           <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
           <path d="M10 16C10 12.6863 12.6863 10 16 10C19.3137 10 22 12.6863 22 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -82,14 +73,14 @@
     <section id="hero" class="hero">
       <canvas id="hero-canvas" class="hero-canvas"></canvas>
       <div class="hero-content">
-        <h1 class="hero-title" data-i18n="hero.title">让思考，有地方落脚</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">Roa 是一块会思考的画布。你在这里不只是记录，而是探索。</p>
-        <div class="hero-cta">
-          <a href="#" class="btn btn-primary" data-i18n="hero.cta" role="button">开始我的第一块画布</a>
-          <a href="#features" class="btn btn-secondary" data-i18n="hero.cta-secondary">先看看它能做什么</a>
+        <h1 class="hero-title hero-entrance" data-i18n="hero.title">让思考，有地方落脚</h1>
+        <p class="hero-subtitle hero-entrance" data-i18n="hero.subtitle">Roa 是一块会思考的画布。你在这里不只是记录，而是探索。</p>
+        <div class="hero-cta hero-entrance">
+          <a href="guide.html" class="btn btn-primary" data-i18n="hero.cta" role="button">开始我的第一块画布</a>
+          <a href="features.html" class="btn btn-secondary" data-i18n="hero.cta-secondary">先看看它能做什么</a>
         </div>
       </div>
-      <div class="scroll-indicator">
+      <div class="scroll-indicator hero-entrance">
         <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
       </div>
     </section>
@@ -101,17 +92,17 @@
           <p class="section-subtitle" data-i18n="features.subtitle">三个让你惊喜的能力</p>
         </div>
         <div class="features-grid">
-          <div class="feature-card" data-feature="1">
+          <div class="feature-card scroll-reveal" data-feature="1">
             <div class="feature-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="16" r="6" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="32" r="6" stroke="currentColor" stroke-width="2"/><line x1="20" y1="18" x2="28" y2="18" stroke="currentColor" stroke-width="2"/><line x1="18" y1="20" x2="22" y2="28" stroke="currentColor" stroke-width="2"/><line x1="30" y1="20" x2="26" y2="28" stroke="currentColor" stroke-width="2"/></svg></div>
             <h3 class="feature-title" data-i18n="feature.1.title">思考，终于有了形状</h3>
             <p class="feature-desc" data-i18n="feature.1.desc">节点和连线让抽象的想法变得可见、可触、可重组。</p>
           </div>
-          <div class="feature-card" data-feature="2">
+          <div class="feature-card scroll-reveal" data-feature="2">
             <div class="feature-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 8C15.163 8 8 15.163 8 24s7.163 16 16 16 16-7.163 16-16S32.837 8 24 8z" stroke="currentColor" stroke-width="2"/><path d="M24 16v8l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
             <h3 class="feature-title" data-i18n="feature.2.title">AI 不打断你，它等你</h3>
             <p class="feature-desc" data-i18n="feature.2.desc">AI 在你需要时出现，在你思考时沉默。它尊重你的节奏。</p>
           </div>
-          <div class="feature-card" data-feature="3">
+          <div class="feature-card scroll-reveal" data-feature="3">
             <div class="feature-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/><line x1="24" y1="8" x2="24" y2="14" stroke="currentColor" stroke-width="2"/><line x1="24" y1="34" x2="24" y2="40" stroke="currentColor" stroke-width="2"/><line x1="8" y1="24" x2="14" y2="24" stroke="currentColor" stroke-width="2"/><line x1="34" y1="24" x2="40" y2="24" stroke="currentColor" stroke-width="2"/></svg></div>
             <h3 class="feature-title" data-i18n="feature.3.title">大局与细节，同时看见</h3>
             <p class="feature-desc" data-i18n="feature.3.desc">缩放自如，既能看到森林，也能看清每一片叶子。</p>
@@ -128,7 +119,7 @@
           <p class="section-subtitle" data-i18n="scenarios.subtitle">四种人，同一个需求</p>
         </div>
         <div class="scenarios-grid">
-          <div class="scenario-card" data-scenario="1">
+          <div class="scenario-card scroll-reveal" data-scenario="1">
             <div class="scenario-icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="24" cy="16" r="8"/>
@@ -139,7 +130,7 @@
             <h3 class="scenario-title" data-i18n="scenario.1.title">知识工作者</h3>
             <p class="scenario-desc" data-i18n="scenario.1.desc">组织复杂信息，并行探索方案。在混乱中找到秩序。</p>
           </div>
-          <div class="scenario-card" data-scenario="2">
+          <div class="scenario-card scroll-reveal" data-scenario="2">
             <div class="scenario-icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
                 <rect x="10" y="6" width="28" height="36" rx="3"/>
@@ -152,7 +143,7 @@
             <h3 class="scenario-title" data-i18n="scenario.2.title">研究者</h3>
             <p class="scenario-desc" data-i18n="scenario.2.desc">整理文献，对比实验。节点和连线承载你的上下文。</p>
           </div>
-          <div class="scenario-card" data-scenario="3">
+          <div class="scenario-card scroll-reveal" data-scenario="3">
             <div class="scenario-icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
                 <rect x="6" y="10" width="36" height="24" rx="3"/>
@@ -164,7 +155,7 @@
             <h3 class="scenario-title" data-i18n="scenario.3.title">产品/设计师</h3>
             <p class="scenario-desc" data-i18n="scenario.3.desc">拆解需求，可视化流程。拖拽和连线让你感到自由。</p>
           </div>
-          <div class="scenario-card" data-scenario="4">
+          <div class="scenario-card scroll-reveal" data-scenario="4">
             <div class="scenario-icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M14 8v32M24 8v32M34 8v32" stroke-linecap="round"/>
@@ -187,60 +178,60 @@
             <p class="footer-philosophy-line">
               <span class="fp-think">Think in</span>
               <span class="fp-space">S</span><span class="fp-space fp-up">P</span><span class="fp-space">A</span><span class="fp-space fp-up">C</span><span class="fp-space">E</span><span class="fp-comma">,</span>
-              <span class="fp-not">not in lines.</span>
+              <span class="fp-not" data-i18n="philosophy.bg3">not in lines.</span>
             </p>
           </div>
           <!-- Footer Top: Main columns -->
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="#" class="footer-logo">
+            <a href="/" class="footer-logo">
               <svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/><path d="M10 16C10 12.6863 12.6863 10 16 10C19.3137 10 22 12.6863 22 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
               <span>Roa</span>
             </a>
             <p class="footer-tagline" data-i18n="footer.tagline">为思考者而建</p>
-            <p class="footer-desc">AI 原生思维工具，让思考更自然、更有序、更有温度。</p>
+            <p data-i18n="footer.desc" class="footer-desc">AI 原生思维工具，让思考更自然、更有序、更有温度。</p>
           </div>
 
           <div class="footer-column">
-            <h4 class="footer-col-title">产品</h4>
+            <h4 data-i18n="footer.productLabel" class="footer-col-title">产品</h4>
             <ul class="footer-link-list">
-              <li><a href="#">功能介绍</a></li>
-              <li><a href="#">更新日志</a></li>
-              <li><a href="#">使用指南</a></li>
+              <li><a href="features.html" data-i18n="footer.product.intro">功能介绍</a></li>
+              <li><a href="changelog.html" data-i18n="footer.product.changelog">更新日志</a></li>
+              <li><a href="guide.html" data-i18n="footer.product.guide">使用指南</a></li>
             </ul>
           </div>
 
           <div class="footer-column">
-            <h4 class="footer-col-title">关于</h4>
+            <h4 data-i18n="footer.aboutLabel" class="footer-col-title">关于</h4>
             <ul class="footer-link-list">
-              <li><a href="#">关于 Roa</a></li>
-              <li><a href="#">联系方式</a></li>
+              <li><a href="about.html" data-i18n="footer.about.roa">关于 Roa</a></li>
+              <li><a href="contact.html" data-i18n="footer.about.contact">联系方式</a></li>
                           </ul>
           </div>
         </div>
 
         <!-- Friend Links Section -->
         <div class="footer-friends">
-          <h4 class="footer-friends-title">友情链接</h4>
+          <h4 data-i18n="footer.friendsLabel" class="footer-friends-title">友情链接</h4>
           <div class="footer-friends-grid">
             <!-- AI 对话产品 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">AI 对话产品</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.chat">AI 对话产品</h5>
               <div class="friend-links">
                 <a class="hot" href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">ChatGPT</a>
                 <a class="hot" href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">Gemini</a>
                 <a class="hot" href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude</a>
-                <a class="hot" href="https://www.doubao.com" target="_blank" rel="noopener noreferrer">豆包</a>
-                <a class="hot" href="https://kimi.moonshot.cn" target="_blank" rel="noopener noreferrer">Kimi</a>
+                <a class="hot" href="https://www.doubao.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.doubao">豆包</span></a>
+                <a class="hot" href="https://kimi.moonshot.cn" target="_blank" rel="noopener noreferrer"><span data-i18n="product.kimi">Kimi</span></a>
                 <a class="hot" href="https://chat.deepseek.com" target="_blank" rel="noopener noreferrer">DeepSeek</a>
-                <a href="https://tongyi.aliyun.com" target="_blank" rel="noopener noreferrer">通义千问</a>
-                <a href="https://yiyan.baidu.com" target="_blank" rel="noopener noreferrer">文心一言</a>
+                <a href="https://tongyi.aliyun.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.tongyi">通义千问</span></a>
+                <a href="https://yiyan.baidu.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.wenxin">文心一言</span></a>
                 <a class="hot" href="https://www.perplexity.ai" target="_blank" rel="noopener noreferrer">Perplexity</a>
                 <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer">Copilot</a>
-                <a href="https://chatglm.cn" target="_blank" rel="noopener noreferrer">ChatGLM</a>
-                <a href="https://hunyuan.tencent.com" target="_blank" rel="noopener noreferrer">混元</a>
-                <a href="https://www.baichuan-ai.com" target="_blank" rel="noopener noreferrer">百川</a>
-                <a href="https://xinghuo.xfyun.cn" target="_blank" rel="noopener noreferrer">讯飞星火</a>
+                <a href="https://chatglm.cn" target="_blank" rel="noopener noreferrer"><span data-i18n="product.chatglm">ChatGLM</span></a>
+                <a href="https://hunyuan.tencent.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.hunyuan">混元</span></a>
+                <a href="https://www.baichuan-ai.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.baichuan">百川</span></a>
+                <a href="https://xinghuo.xfyun.cn" target="_blank" rel="noopener noreferrer"><span data-i18n="product.xunfei">讯飞星火</span></a>
                 <a href="https://pi.ai" target="_blank" rel="noopener noreferrer">Pi</a>
                 <a href="https://poe.com" target="_blank" rel="noopener noreferrer">Poe</a>
                 <a href="https://you.com" target="_blank" rel="noopener noreferrer">You.com</a>
@@ -252,16 +243,16 @@
 
             <!-- API 开放平台 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">API 开放平台</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.api">API 开放平台</h5>
               <div class="friend-links">
                 <a class="hot" href="https://platform.openai.com" target="_blank" rel="noopener noreferrer">OpenAI Platform</a>
                 <a href="https://ai.google.dev" target="_blank" rel="noopener noreferrer">Google AI Studio</a>
                 <a class="hot" href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer">Anthropic</a>
                 <a class="hot" href="https://platform.deepseek.com" target="_blank" rel="noopener noreferrer">DeepSeek API</a>
-                <a href="https://open.bigmodel.cn" target="_blank" rel="noopener noreferrer">智谱 AI</a>
-                <a href="https://cloud.baidu.com/qianfan" target="_blank" rel="noopener noreferrer">百度千帆</a>
-                <a href="https://dashscope.aliyun.com" target="_blank" rel="noopener noreferrer">通义灵犀</a>
-                <a class="hot" href="https://cloud.siliconflow.cn" target="_blank" rel="noopener noreferrer">硅基流动</a>
+                <a href="https://open.bigmodel.cn" target="_blank" rel="noopener noreferrer"><span data-i18n="product.zhipu">智谱 AI</span></a>
+                <a href="https://cloud.baidu.com/qianfan" target="_blank" rel="noopener noreferrer"><span data-i18n="product.qianfan">百度千帆</span></a>
+                <a href="https://dashscope.aliyun.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.tongyi-lingxi">通义灵犀</span></a>
+                <a class="hot" href="https://cloud.siliconflow.cn" target="_blank" rel="noopener noreferrer"><span data-i18n="product.siliconflow">硅基流动</span></a>
                 <a href="https://www.moonshot.cn" target="_blank" rel="noopener noreferrer">Moonshot API</a>
                 <a class="hot" href="https://huggingface.co" target="_blank" rel="noopener noreferrer">Hugging Face</a>
                 <a href="https://replicate.com" target="_blank" rel="noopener noreferrer">Replicate</a>
@@ -279,7 +270,7 @@
 
             <!-- AI 工具与应用 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">AI 工具与应用</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.tools">AI 工具与应用</h5>
               <div class="friend-links">
                 <a class="hot" href="https://midjourney.com" target="_blank" rel="noopener noreferrer">Midjourney</a>
                 <a class="hot" href="https://www.cursor.com" target="_blank" rel="noopener noreferrer">Cursor</a>
@@ -303,7 +294,7 @@
 
             <!-- AI 编程与开发 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">AI 编程与开发</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.dev">AI 编程与开发</h5>
               <div class="friend-links">
                 <a class="hot" href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</a>
                 <a class="hot" href="https://www.windsurf.com" target="_blank" rel="noopener noreferrer">Windsurf</a>
@@ -326,7 +317,7 @@
 
             <!-- AI 图像与视觉 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">AI 图像与视觉</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.vision">AI 图像与视觉</h5>
               <div class="friend-links">
                 <a class="hot" href="https://stability.ai" target="_blank" rel="noopener noreferrer">Stability AI</a>
                 <a href="https://leonardo.ai" target="_blank" rel="noopener noreferrer">Leonardo AI</a>
@@ -335,21 +326,21 @@
                 <a href="https://www.remove.bg" target="_blank" rel="noopener noreferrer">Remove.bg</a>
                 <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash AI</a>
                 <a class="hot" href="https://pika.art" target="_blank" rel="noopener noreferrer">Pika</a>
-                <a class="hot" href="https://klingai.com" target="_blank" rel="noopener noreferrer">可灵</a>
-                <a href="https://jimeng.jianying.com" target="_blank" rel="noopener noreferrer">即梦</a>
-                <a href="https://tongyi.aliyun.com/wanxiang" target="_blank" rel="noopener noreferrer">通义万相</a>
+                <a class="hot" href="https://klingai.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.kling">可灵</span></a>
+                <a href="https://jimeng.jianying.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.jimeng">即梦</span></a>
+                <a href="https://tongyi.aliyun.com/wanxiang" target="_blank" rel="noopener noreferrer"><span data-i18n="product.tongyi-wanxiang">通义万相</span></a>
                 <a href="https://www.artbreeder.com" target="_blank" rel="noopener noreferrer">Artbreeder</a>
                 <a class="hot" href="https://lumalabs.ai" target="_blank" rel="noopener noreferrer">Luma AI</a>
                 <a href="https://www.meshy.ai" target="_blank" rel="noopener noreferrer">Meshy</a>
                 <a href="https://tripo3d.ai" target="_blank" rel="noopener noreferrer">Tripo3D</a>
-                <a href="https://www.hailuoai.video" target="_blank" rel="noopener noreferrer">海螺AI</a>
+                <a href="https://www.hailuoai.video" target="_blank" rel="noopener noreferrer"><span data-i18n="product.hailuo">海螺AI</span></a>
                 <a href="https://www.domo.ai" target="_blank" rel="noopener noreferrer">Domo AI</a>
               </div>
             </div>
 
             <!-- 开源模型与社区 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">开源模型与社区</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.open">开源模型与社区</h5>
               <div class="friend-links">
                 <a class="hot" href="https://ollama.com" target="_blank" rel="noopener noreferrer">Ollama</a>
                 <a href="https://lmstudio.ai" target="_blank" rel="noopener noreferrer">LM Studio</a>
@@ -357,19 +348,19 @@
                 <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer">Open WebUI</a>
                 <a href="https://comfyui.com" target="_blank" rel="noopener noreferrer">ComfyUI</a>
                 <a href="https://automatic1111.com" target="_blank" rel="noopener noreferrer">SD WebUI</a>
-                <a href="https://coze.com" target="_blank" rel="noopener noreferrer">Coze</a>
-                <a href="https://maxai.me" target="_blank" rel="noopener noreferrer">MaxAI</a>
-                <a href="https://lobehub.com" target="_blank" rel="noopener noreferrer">LobeChat</a>
-                <a href="https://chatboxai.app" target="_blank" rel="noopener noreferrer">ChatBox</a>
+                <a href="https://coze.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.coze">Coze</span></a>
+                <a href="https://maxai.me" target="_blank" rel="noopener noreferrer"><span data-i18n="product.maxai">MaxAI</span></a>
+                <a href="https://lobehub.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.lobechat">LobeChat</span></a>
+                <a href="https://chatboxai.app" target="_blank" rel="noopener noreferrer"><span data-i18n="product.chatbox">ChatBox</span></a>
                 <a href="https://jan.ai" target="_blank" rel="noopener noreferrer">Jan</a>
-                <a href="https://msty.app" target="_blank" rel="noopener noreferrer">Msty</a>
+                <a href="https://msty.app" target="_blank" rel="noopener noreferrer"><span data-i18n="product.msty">Msty</span></a>
                 <a href="https://text-generation-webui.com" target="_blank" rel="noopener noreferrer">text-gen-webui</a>
               </div>
             </div>
 
             <!-- AI 学习与研究 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">AI 学习与研究</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.learn">AI 学习与研究</h5>
               <div class="friend-links">
                 <a href="https://arxiv.org" target="_blank" rel="noopener noreferrer">arXiv</a>
                 <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer">Google Scholar</a>
@@ -383,15 +374,15 @@
                 <a href="https://wandb.ai" target="_blank" rel="noopener noreferrer">W&B</a>
                 <a href="https://paperswithcode.com" target="_blank" rel="noopener noreferrer">Papers with Code</a>
                 <a href="https://huggingface.co/papers" target="_blank" rel="noopener noreferrer">HF Daily Papers</a>
-                <a href="https://www.36kr.com/information/AI" target="_blank" rel="noopener noreferrer">36Kr AI</a>
-                <a href="https://jiqizhixin.com" target="_blank" rel="noopener noreferrer">机器之心</a>
-                <a href="https://www.qbitai.com" target="_blank" rel="noopener noreferrer">量子位</a>
+                <a href="https://www.36kr.com/information/AI" target="_blank" rel="noopener noreferrer"><span data-i18n="product.36kr">36Kr AI</span></a>
+                <a href="https://jiqizhixin.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.jiqi">机器之心</span></a>
+                <a href="https://www.qbitai.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.liangzi">量子位</span></a>
               </div>
             </div>
 
             <!-- AI 期刊与资讯 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">AI 期刊与资讯</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.journal">AI 期刊与资讯</h5>
               <div class="friend-links">
                 <a href="https://www.nature.com/natmachintell" target="_blank" rel="noopener noreferrer">Nature Machine Intelligence</a>
                 <a href="https://www.science.org/journal/robotics" target="_blank" rel="noopener noreferrer">Science Robotics</a>
@@ -418,7 +409,7 @@
 
             <!-- 世界模型与空间智能 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">世界模型与空间智能</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.world">世界模型与空间智能</h5>
               <div class="friend-links">
                 <a class="hot" href="https://worldlabs.ai" target="_blank" rel="noopener noreferrer">World Labs</a>
                 <a href="https://wayve.ai" target="_blank" rel="noopener noreferrer">Wayve</a>
@@ -445,7 +436,7 @@
 
             <!-- AI 加速硬件 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">AI 加速硬件</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.hw">AI 加速硬件</h5>
               <div class="friend-links">
                 <a class="hot" href="https://www.nvidia.com/en-us/ai/" target="_blank" rel="noopener noreferrer">NVIDIA</a>
                 <a href="https://www.amd.com/en/ai" target="_blank" rel="noopener noreferrer">AMD Instinct</a>
@@ -468,15 +459,15 @@
 
             <!-- 深度学习框架 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">深度学习框架</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.framework">深度学习框架</h5>
               <div class="friend-links">
                 <a class="hot" href="https://pytorch.org" target="_blank" rel="noopener noreferrer">PyTorch</a>
                 <a class="hot" href="https://www.tensorflow.org" target="_blank" rel="noopener noreferrer">TensorFlow</a>
                 <a href="https://jax.readthedocs.io" target="_blank" rel="noopener noreferrer">JAX</a>
                 <a href="https://keras.io" target="_blank" rel="noopener noreferrer">Keras</a>
-                <a href="https://www.paddlepaddle.org.cn" target="_blank" rel="noopener noreferrer">PaddlePaddle</a>
-                <a href="https://www.mindspore.cn" target="_blank" rel="noopener noreferrer">MindSpore</a>
-                <a href="https://oneflow.org" target="_blank" rel="noopener noreferrer">OneFlow</a>
+                <a href="https://www.paddlepaddle.org.cn" target="_blank" rel="noopener noreferrer"><span data-i18n="product.paddle">PaddlePaddle</span></a>
+                <a href="https://www.mindspore.cn" target="_blank" rel="noopener noreferrer"><span data-i18n="product.mindspore">MindSpore</span></a>
+                <a href="https://oneflow.org" target="_blank" rel="noopener noreferrer"><span data-i18n="product.oneflow">OneFlow</span></a>
                 <a href="https://mxnet.apache.org" target="_blank" rel="noopener noreferrer">MXNet</a>
                 <a class="hot" href="https://huggingface.co/docs/transformers" target="_blank" rel="noopener noreferrer">Transformers</a>
                 <a href="https://github.com/microsoft/DeepSpeed" target="_blank" rel="noopener noreferrer">DeepSpeed</a>
@@ -495,11 +486,11 @@
 
             <!-- AI Agent 平台 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">AI Agent 平台</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.agent">AI Agent 平台</h5>
               <div class="friend-links">
-                <a class="hot" href="https://www.coze.com" target="_blank" rel="noopener noreferrer">Coze</a>
-                <a class="hot" href="https://dify.ai" target="_blank" rel="noopener noreferrer">Dify</a>
-                <a href="https://fastgpt.in" target="_blank" rel="noopener noreferrer">FastGPT</a>
+                <a class="hot" href="https://www.coze.com" target="_blank" rel="noopener noreferrer"><span data-i18n="product.coze">Coze</span></a>
+                <a class="hot" href="https://dify.ai" target="_blank" rel="noopener noreferrer"><span data-i18n="product.dify">Dify</span></a>
+                <a href="https://fastgpt.in" target="_blank" rel="noopener noreferrer"><span data-i18n="product.fastgpt">FastGPT</span></a>
                 <a href="https://www.crewai.com" target="_blank" rel="noopener noreferrer">CrewAI</a>
                 <a href="https://microsoft.github.io/autogen/" target="_blank" rel="noopener noreferrer">AutoGen</a>
                 <a href="https://microsoft.github.io/semantic-kernel/" target="_blank" rel="noopener noreferrer">Semantic Kernel</a>
@@ -512,7 +503,7 @@
 
             <!-- AI 语音与音乐 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">AI 语音与音乐</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.voice">AI 语音与音乐</h5>
               <div class="friend-links">
                 <a class="hot" href="https://suno.com" target="_blank" rel="noopener noreferrer">Suno</a>
                 <a href="https://www.udio.com" target="_blank" rel="noopener noreferrer">Udio</a>
@@ -527,13 +518,13 @@
                 <a href="https://www.d-id.com" target="_blank" rel="noopener noreferrer">D-ID</a>
                 <a href="https://www.runwayml.com" target="_blank" rel="noopener noreferrer">Runway</a>
                 <a href="https://www.pika.art" target="_blank" rel="noopener noreferrer">Pika</a>
-                <a href="https://www.kling.ai" target="_blank" rel="noopener noreferrer">可灵</a>
+                <a href="https://www.kling.ai" target="_blank" rel="noopener noreferrer"><span data-i18n="product.kling">可灵</span></a>
               </div>
             </div>
 
             <!-- 数据与向量数据库 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">数据与向量数据库</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.data">数据与向量数据库</h5>
               <div class="friend-links">
                 <a class="hot" href="https://www.pinecone.io" target="_blank" rel="noopener noreferrer">Pinecone</a>
                 <a href="https://www.weaviate.io" target="_blank" rel="noopener noreferrer">Weaviate</a>
@@ -550,7 +541,7 @@
 
             <!-- MLOps 与部署 -->
             <div class="footer-friend-group">
-              <h5 class="friend-group-label">MLOps 与部署</h5>
+              <h5 class="friend-group-label" data-i18n="footer.group.mlops">MLOps 与部署</h5>
               <div class="friend-links">
                 <a href="https://wandb.ai" target="_blank" rel="noopener noreferrer">Weights & Biases</a>
                 <a href="https://mlflow.org" target="_blank" rel="noopener noreferrer">MLflow</a>
@@ -571,7 +562,7 @@
 
           <!-- Expand/Collapse Button -->
           <button class="friends-toggle" aria-expanded="false" aria-label="展开更多友情链接">
-            <span class="friends-toggle-text">展开更多</span>
+            <span class="friends-toggle-text" data-i18n="footer.friendsExpand">展开更多</span>
             <svg class="friends-toggle-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M4 6l4 4 4-4"/>
             </svg>
@@ -581,9 +572,9 @@
         <!-- Footer Bottom -->
         <div class="footer-bottom">
           <div class="footer-legal">
-            <a href="#" data-i18n="footer.privacy">隐私政策</a>
+            <a href="privacy.html" data-i18n="footer.privacy">隐私政策</a>
             <span class="footer-divider">·</span>
-            <a href="#" data-i18n="footer.terms">使用条款</a>
+            <a href="terms.html" data-i18n="footer.terms">使用条款</a>
           </div>
           <p class="footer-copyright">&copy; 2026 Roa. All rights reserved.</p>
         </div>
@@ -595,9 +586,10 @@
   <script src="scripts/i18n.js" defer></script>
   <script src="scripts/scroll.js" defer></script>
   <script src="scripts/analytics.js" defer></script>
+  <script src="scripts/cursor.js" defer></script>
   <script src="scripts/main.js" defer></script>
 
     <!-- Floating CTA Button -->
-    <a href="#" class="floating-cta" id="floating-cta" data-i18n="cta.button" aria-label="开始体验">开始我的第一块画布</a>
+    <a href="guide.html" class="floating-cta" id="floating-cta" data-i18n="cta.button" aria-label="开始体验">开始我的第一块画布</a>
   </body>
 </html>

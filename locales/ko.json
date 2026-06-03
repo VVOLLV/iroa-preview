@@ -1,74 +1,141 @@
 {
-    "meta":  {
-                 "title":  "Roa - 생각에, 자리를",
-                 "description":  "Roa는 생각하는 캔버스. 기록이 아닌, 탐색의 공간."
-             },
-    "nav":  {
-                "logo":  "Roa"
-            },
-    "hero":  {
-                 "title":  "생각에, 자리를",
-                 "subtitle":  "Roa는 생각하는 캔버스. 기록이 아닌, 탐색의 공간.",
-                 "cta":  "첫 번째 캔버스 시작",
-                 "cta-secondary":  "무엇을 할 수 있는지 보기"
-             },
-    "features":  {
-                     "title":  "무엇을 할 수 있나요",
-                     "subtitle":  "당신을 놀라게 할 세 가지 능력"
-                 },
-    "feature":  {
-                    "1":  {
-                              "title":  "생각이, 형태를 갖추다",
-                              "desc":  "노드와 연결로 추상적인 아이디어를 보고, 만지고, 재구성할 수 있습니다."
-                          },
-                    "2":  {
-                              "title":  "AI는 기다립니다. 끊지 않아요.",
-                              "desc":  "AI는 필요할 때 나타나고, 생각할 때 침묵합니다. 당신의 리듬을 존중합니다."
-                          },
-                    "3":  {
-                              "title":  "전체와 세부를, 동시에",
-                              "desc":  "자유롭게 확대—숲과 모든 나뭇잎을 동시에 볼 수 있습니다."
-                          }
-                },
-    "philosophy":  {
-                       "label":  "THINKING SPACE",
-                       "sub2":  "지었습니다",
-                       "line1":  "생각이란,",
-                       "line2":  "공간이 필요한",
-                       "line3":  "활동입니다.",
-                       "sub1":  "우리는 그곳을"
-                   },
-    "scenarios":  {
-                      "title":  "누가 사용하나요",
-                      "subtitle":  "네 가지 유형의 사람들, 하나의 공통된 필요"
-                  },
-    "scenario":  {
-                     "1":  {
-                               "title":  "지식 근로자",
-                               "desc":  "복잡한 정보를 정리하고, 병렬로 솔루션을 탐색합니다. 혼돈 속에서 질서를 찾으세요."
-                           },
-                     "2":  {
-                               "title":  "연구자",
-                               "desc":  "문헌을 정리하고, 실험을 비교합니다. 노드와 연결이 당신의 맥락을 담습니다."
-                           },
-                     "3":  {
-                               "title":  "프로덕트/디자이너",
-                               "desc":  "요구사항을 분해하고, 워크플로를 시각화합니다. 드래그와 연결로 자유를 느끼세요."
-                           },
-                     "4":  {
-                               "title":  "학생/평생 학습자",
-                               "desc":  "학습 계획, 지식 축적. 게스트 모드로 부담 없이 체험하세요."
-                           }
-                 },
-    "cta":  {
-                "title":  "첫 번째 캔버스, 지금 시작하세요",
-                "note":  "가입 없이 게스트로 체험. 데이터는 안전합니다.",
-                "button":  "첫 번째 캔버스 시작"
-            },
-    "footer":  {
-                   "tagline":  "사색가를 위해",
-                   "privacy":  "개인정보 처리방침",
-                   "terms":  "이용약관",
-                   "contact":  "문의하기"
-               }
+  "meta": {
+    "title": "Roa - 생각에, 자리를",
+    "description": "Roa는 생각하는 캔버스. 기록이 아닌, 탐색의 공간."
+  },
+  "nav": {
+    "logo": "Roa"
+  },
+  "hero": {
+    "title": "생각에, 자리를",
+    "subtitle": "Roa는 생각하는 캔버스. 기록이 아닌, 탐색의 공간.",
+    "cta": "첫 번째 캔버스 시작",
+    "cta-secondary": "무엇을 할 수 있는지 보기"
+  },
+  "features": {
+    "title": "무엇을 할 수 있나요",
+    "subtitle": "당신을 놀라게 할 세 가지 능력"
+  },
+  "feature": {
+    "1": {
+      "title": "생각이, 형태를 갖추다",
+      "desc": "노드와 연결로 추상적인 아이디어를 보고, 만지고, 재구성할 수 있습니다."
+    },
+    "2": {
+      "title": "AI는 기다립니다. 끊지 않아요.",
+      "desc": "AI는 필요할 때 나타나고, 생각할 때 침묵합니다. 당신의 리듬을 존중합니다."
+    },
+    "3": {
+      "title": "전체와 세부를, 동시에",
+      "desc": "자유롭게 확대—숲과 모든 나뭇잎을 동시에 볼 수 있습니다."
+    }
+  },
+  "philosophy": {
+    "label": "THINKING SPACE",
+    "sub2": "지었습니다",
+    "line1": "생각이란,",
+    "line2": "공간이 필요한",
+    "line3": "활동입니다.",
+    "sub1": "우리는 그곳을",
+    "bg1": "Think in",
+    "bg2": "SPACE,",
+    "bg3": "not in lines."
+  },
+  "scenarios": {
+    "title": "누가 사용하나요",
+    "subtitle": "네 가지 유형의 사람들, 하나의 공통된 필요"
+  },
+  "scenario": {
+    "1": {
+      "title": "지식 근로자",
+      "desc": "복잡한 정보를 정리하고, 병렬로 솔루션을 탐색합니다. 혼돈 속에서 질서를 찾으세요."
+    },
+    "2": {
+      "title": "연구자",
+      "desc": "문헌을 정리하고, 실험을 비교합니다. 노드와 연결이 당신의 맥락을 담습니다."
+    },
+    "3": {
+      "title": "프로덕트/디자이너",
+      "desc": "요구사항을 분해하고, 워크플로를 시각화합니다. 드래그와 연결로 자유를 느끼세요."
+    },
+    "4": {
+      "title": "학생/평생 학습자",
+      "desc": "학습 계획, 지식 축적. 게스트 모드로 부담 없이 체험하세요."
+    }
+  },
+  "cta": {
+    "title": "첫 번째 캔버스, 지금 시작하세요",
+    "note": "가입 없이 게스트로 체험. 데이터는 안전합니다.",
+    "button": "첫 번째 캔버스 시작"
+  },
+  "footer": {
+    "tagline": "사색가를 위해",
+    "privacy": "개인정보 처리방침",
+    "terms": "이용약관",
+    "contact": "문의하기",
+    "desc": "AI ???? ?? ??. ??? ? ?????, ?????, ????.",
+    "product": {
+      "intro": "기능 소개",
+      "changelog": "업데이트 로그",
+      "guide": "사용 가이드"
+    },
+    "about": {
+      "roa": "Roa 소개",
+      "contact": "문의"
+    },
+    "friends": "??? ??",
+    "group": {
+      "chat": "AI ??",
+      "api": "API ???",
+      "tools": "AI ?? ? ?",
+      "dev": "AI ??",
+      "vision": "AI ??",
+      "open": "???? ? ????",
+      "learn": "AI ?? ? ??",
+      "journal": "AI ?? ? ??",
+      "world": "?? ?? ? ?? AI",
+      "hw": "AI ????",
+      "framework": "??? ?????",
+      "agent": "AI Agent ???",
+      "voice": "AI ?? ? ??",
+      "data": "??? ? ?? DB",
+      "mlops": "MLOps ? ??"
+    },
+    "productLabel": "??",
+    "aboutLabel": "??",
+    "friendsLabel": "??? ??",
+    "friendsExpand": "더 보기"
+  },
+  "product": {
+    "doubao": "????",
+    "tongyi": "????",
+    "wenxin": "????",
+    "hunyuan": "???",
+    "baichuan": "???",
+    "xunfei": "?????",
+    "zhipu": "?? AI",
+    "qianfan": "?????",
+    "tongyi-lingxi": "????",
+    "siliconflow": "SiliconFlow",
+    "keling": "??",
+    "jimeng": "??",
+    "tongyi-wanxiang": "????",
+    "hailuo": "??? AI",
+    "paddle": "PaddlePaddle",
+    "mindspore": "MindSpore",
+    "oneflow": "OneFlow",
+    "kimi": "Kimi",
+    "chatglm": "ChatGLM",
+    "jiqi": "????",
+    "liangzi": "????",
+    "36kr": "36Kr AI",
+    "dify": "Dify",
+    "fastgpt": "FastGPT",
+    "coze": "Coze",
+    "maxai": "MaxAI",
+    "lobechat": "LobeChat",
+    "chatbox": "ChatBox",
+    "msty": "Msty",
+    "kling": "클링"
+  }
 }

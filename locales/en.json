@@ -1,74 +1,140 @@
 {
-    "meta":  {
-                 "title":  "Roa - A place for your thoughts",
-                 "description":  "Roa is a canvas that thinks. Not just notes, exploration."
-             },
-    "nav":  {
-                "logo":  "Roa"
-            },
-    "hero":  {
-                 "title":  "A place for your thoughts",
-                 "subtitle":  "Roa is a canvas that thinks. Not just notes, exploration.",
-                 "cta":  "Start my first canvas",
-                 "cta-secondary":  "See what it can do"
-             },
-    "features":  {
-                     "title":  "What it can do",
-                     "subtitle":  "Three capabilities that will surprise you"
-                 },
-    "feature":  {
-                    "1":  {
-                              "title":  "Thoughts, finally shaped",
-                              "desc":  "Nodes and connections make abstract ideas visible, touchable, and reorganizable."
-                          },
-                    "2":  {
-                              "title":  "AI waits, never interrupts",
-                              "desc":  "AI appears when you need it, stays silent when you think. It respects your rhythm."
-                          },
-                    "3":  {
-                              "title":  "Big picture and detail, together",
-                              "desc":  "Zoom freely—see the forest and every single leaf at once."
-                          }
-                },
-    "philosophy":  {
-                       "label":  "THINKING SPACE",
-                       "sub2":  "a home",
-                       "line1":  "Thinking is an",
-                       "line2":  "activity that",
-                       "line3":  "needs space.",
-                       "sub1":  "We built it"
-                   },
-    "scenarios":  {
-                      "title":  "Who uses it",
-                      "subtitle":  "Four types of people, one shared need"
-                  },
-    "scenario":  {
-                     "1":  {
-                               "title":  "Knowledge Workers",
-                               "desc":  "Organize complex information, explore solutions in parallel. Find order in chaos."
-                           },
-                     "2":  {
-                               "title":  "Researchers",
-                               "desc":  "Organize literature, compare experiments. Nodes and connections carry your context."
-                           },
-                     "3":  {
-                               "title":  "Product/Designers",
-                               "desc":  "Break down requirements, visualize workflows. Drag and connect to feel free."
-                           },
-                     "4":  {
-                               "title":  "Students/Lifelong Learners",
-                               "desc":  "Plan learning, accumulate knowledge. Guest mode lets you explore stress-free."
-                           }
-                 },
-    "cta":  {
-                "title":  "Your first canvas starts now",
-                "note":  "No sign-up needed. Try as guest. Your thoughts are safe.",
-                "button":  "Start my first canvas"
-            },
-    "footer":  {
-                   "tagline":  "Built for thinkers",
-                   "privacy":  "Privacy Policy",
-                   "terms":  "Terms of Service",
-                   "contact":  "Contact Us"
-               }
+  "meta": {
+    "title": "Roa - A place for your thoughts",
+    "description": "Roa is a canvas that thinks. Not just notes, exploration."
+  },
+  "nav": {
+    "logo": "Roa"
+  },
+  "hero": {
+    "title": "A place for your thoughts",
+    "subtitle": "Roa is a canvas that thinks. Not just notes, exploration.",
+    "cta": "Start my first canvas",
+    "cta-secondary": "See what it can do"
+  },
+  "features": {
+    "title": "What it can do",
+    "subtitle": "Three capabilities that will surprise you"
+  },
+  "feature": {
+    "1": {
+      "title": "Thoughts, finally shaped",
+      "desc": "Nodes and connections make abstract ideas visible, touchable, and reorganizable."
+    },
+    "2": {
+      "title": "AI waits, never interrupts",
+      "desc": "AI appears when you need it, stays silent when you think. It respects your rhythm."
+    },
+    "3": {
+      "title": "Big picture and detail, together",
+      "desc": "Zoom freely—see the forest and every single leaf at once."
+    }
+  },
+  "philosophy": {
+    "label": "THINKING SPACE",
+    "sub2": "a home",
+    "line1": "Thinking is an",
+    "line2": "activity that",
+    "line3": "needs space.",
+    "sub1": "We built it",
+    "bg1": "Think in",
+    "bg2": "SPACE,",
+    "bg3": "not in lines."
+  },
+  "scenarios": {
+    "title": "Who uses it",
+    "subtitle": "Four types of people, one shared need"
+  },
+  "scenario": {
+    "1": {
+      "title": "Knowledge Workers",
+      "desc": "Organize complex information, explore solutions in parallel. Find order in chaos."
+    },
+    "2": {
+      "title": "Researchers",
+      "desc": "Organize literature, compare experiments. Nodes and connections carry your context."
+    },
+    "3": {
+      "title": "Product/Designers",
+      "desc": "Break down requirements, visualize workflows. Drag and connect to feel free."
+    },
+    "4": {
+      "title": "Students/Lifelong Learners",
+      "desc": "Plan learning, accumulate knowledge. Guest mode lets you explore stress-free."
+    }
+  },
+  "cta": {
+    "title": "Your first canvas starts now",
+    "note": "No sign-up needed. Try as guest. Your thoughts are safe.",
+    "button": "Start my first canvas"
+  },
+  "footer": {
+    "tagline": "Built for thinkers",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact Us",
+    "desc": "AI-native thinking tool. Make thinking more natural, organized, and warm.",
+    "product": {
+      "intro": "Features",
+      "changelog": "Changelog",
+      "guide": "User Guide"
+    },
+    "about": {
+      "roa": "About Roa",
+      "contact": "Contact"
+    },
+    "friends": "Friends & Links",
+    "group": {
+      "chat": "AI Chat",
+      "api": "API Platforms",
+      "tools": "AI Tools & Apps",
+      "dev": "AI Dev & Coding",
+      "vision": "AI Vision",
+      "open": "Open Source & Community",
+      "learn": "AI Learning & Research",
+      "journal": "AI Journals & News",
+      "world": "World Models & Spatial AI",
+      "hw": "AI Hardware",
+      "framework": "Deep Learning Frameworks",
+      "agent": "AI Agent Platforms",
+      "voice": "AI Voice & Music",
+      "data": "Data & Vector DB",
+      "mlops": "MLOps & Deployment"
+    },
+    "productLabel": "Product",
+    "aboutLabel": "About",
+    "friendsLabel": "Friends & Links",
+    "friendsExpand": "Show more"
+  },
+  "product": {
+    "doubao": "Doubao",
+    "tongyi": "Tongyi Qianwen",
+    "wenxin": "Wenxin Yiyan",
+    "hunyuan": "Hunyuan",
+    "baichuan": "Baichuan",
+    "xunfei": "iFlytek Spark",
+    "zhipu": "Zhipu AI",
+    "qianfan": "Baidu Qianfan",
+    "tongyi-lingxi": "Tongyi Lingxi",
+    "siliconflow": "SiliconFlow",
+    "kling": "Kling",
+    "jimeng": "Jimeng",
+    "tongyi-wanxiang": "Tongyi Wanxiang",
+    "hailuo": "Hailuo AI",
+    "paddle": "PaddlePaddle",
+    "mindspore": "MindSpore",
+    "oneflow": "OneFlow",
+    "kimi": "Kimi",
+    "chatglm": "ChatGLM",
+    "jiqi": "Jiqizhixin",
+    "liangzi": "QbitAI",
+    "36kr": "36Kr AI",
+    "dify": "Dify",
+    "fastgpt": "FastGPT",
+    "coze": "Coze",
+    "maxai": "MaxAI",
+    "lobechat": "LobeChat",
+    "chatbox": "ChatBox",
+    "msty": "Msty"
+  }
 }

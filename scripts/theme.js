@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Roa Theme System v2
  * Manages Light/Dark/Random color themes with CSS Custom Properties
  */
@@ -150,3 +150,18 @@ const ThemeSystem = (() => {
 
 // Export for use in other modules
 window.ThemeSystem = ThemeSystem;
+
+// Self-init for standalone pages (sub-pages without main.js)
+(function() {
+  function tryInit() {
+    if (!document.documentElement.hasAttribute('data-theme-applied')) {
+      ThemeSystem.init();
+      document.documentElement.setAttribute('data-theme-applied', 'true');
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tryInit);
+  } else {
+    tryInit();
+  }
+})();

@@ -1,4 +1,4 @@
-﻿import http.server
+import http.server
 import socketserver
 import os
 
@@ -17,7 +17,11 @@ class UTF8Handler(http.server.SimpleHTTPRequestHandler):
             return 'application/javascript; charset=utf-8'
         return base
 
+class ThreadedServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
+    allow_reuse_address = True
+    daemon_threads = True
+
 os.chdir(r'D:\Felix\vibecoding\official-site')
-with socketserver.TCPServer(("", 8000), UTF8Handler) as httpd:
-    print("Serving on port 8000 with UTF-8 charset")
+with ThreadedServer(("", 8000), UTF8Handler) as httpd:
+    print("Serving on port 8000 with UTF-8 charset (threaded)")
     httpd.serve_forever()

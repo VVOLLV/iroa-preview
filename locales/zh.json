@@ -1,74 +1,140 @@
 {
-    "meta":  {
-                 "title":  "Roa - 让思考，有地方落脚",
-                 "description":  "Roa 是一块会思考的画布。你在这里不只是记录，而是探索。"
-             },
-    "nav":  {
-                "logo":  "Roa"
-            },
-    "hero":  {
-                 "title":  "让思考，有地方落脚",
-                 "subtitle":  "Roa 是一块会思考的画布。你在这里不只是记录，而是探索。",
-                 "cta":  "开始我的第一块画布",
-                 "cta-secondary":  "先看看它能做什么"
-             },
-    "features":  {
-                     "title":  "它能做什么",
-                     "subtitle":  "三个让你惊喜的能力"
-                 },
-    "feature":  {
-                    "1":  {
-                              "title":  "思考，终于有了形状",
-                              "desc":  "节点和连线让抽象的想法变得可见、可触、可重组。"
-                          },
-                    "2":  {
-                              "title":  "AI 不打断你，它等你",
-                              "desc":  "AI 在你需要时出现，在你思考时沉默。它尊重你的节奏。"
-                          },
-                    "3":  {
-                              "title":  "大局与细节，同时看见",
-                              "desc":  "缩放自如，既能看到森林，也能看清每一片叶子。"
-                          }
-                },
-    "philosophy":  {
-                       "label":  "THINKING SPACE",
-                       "sub2":  "建了一个家",
-                       "line1":  "思考，是一种",
-                       "line2":  "需要空间的",
-                       "line3":  "活动。",
-                       "sub1":  "我们为它"
-                   },
-    "scenarios":  {
-                      "title":  "谁在用它",
-                      "subtitle":  "四种人，同一个需求"
-                  },
-    "scenario":  {
-                     "1":  {
-                               "title":  "知识工作者",
-                               "desc":  "组织复杂信息，并行探索方案。在混乱中找到秩序。"
-                           },
-                     "2":  {
-                               "title":  "研究者",
-                               "desc":  "整理文献，对比实验。节点和连线承载你的上下文。"
-                           },
-                     "3":  {
-                               "title":  "产品/设计师",
-                               "desc":  "拆解需求，可视化流程。拖拽和连线让你感到自由。"
-                           },
-                     "4":  {
-                               "title":  "学生/终身学习者",
-                               "desc":  "学习规划，知识积累。游客模式让你无压力体验。"
-                           }
-                 },
-    "cta":  {
-                "title":  "你的第一块画布，现在就可以开始",
-                "note":  "无需注册，游客模式直接体验。你的想法不会丢失。",
-                "button":  "开始我的第一块画布"
-            },
-    "footer":  {
-                   "tagline":  "为思考者而建",
-                   "privacy":  "隐私政策",
-                   "terms":  "使用条款",
-                   "contact":  "联系我们"
-               }
+  "meta": {
+    "title": "Roa - 让思考，有地方落脚",
+    "description": "Roa 是一块会思考的画布。你在这里不只是记录，而是探索。"
+  },
+  "nav": {
+    "logo": "Roa"
+  },
+  "hero": {
+    "title": "让思考，有地方落脚",
+    "subtitle": "Roa 是一块会思考的画布。你在这里不只是记录，而是探索。",
+    "cta": "开始我的第一块画布",
+    "cta-secondary": "先看看它能做什么"
+  },
+  "features": {
+    "title": "它能做什么",
+    "subtitle": "三个让你惊喜的能力"
+  },
+  "feature": {
+    "1": {
+      "title": "思考，终于有了形状",
+      "desc": "节点和连线让抽象的想法变得可见、可触、可重组。"
+    },
+    "2": {
+      "title": "AI 不打断你，它等你",
+      "desc": "AI 在你需要时出现，在你思考时沉默。它尊重你的节奏。"
+    },
+    "3": {
+      "title": "大局与细节，同时看见",
+      "desc": "缩放自如，既能看到森林，也能看清每一片叶子。"
+    }
+  },
+  "philosophy": {
+    "label": "THINKING SPACE",
+    "sub2": "建了一个家",
+    "line1": "思考，是一种",
+    "line2": "需要空间的",
+    "line3": "活动。",
+    "sub1": "我们为它",
+    "bg1": "Think in",
+    "bg2": "SPACE,",
+    "bg3": "not in lines."
+  },
+  "scenarios": {
+    "title": "谁在用它",
+    "subtitle": "四种人，同一个需求"
+  },
+  "scenario": {
+    "1": {
+      "title": "知识工作者",
+      "desc": "组织复杂信息，并行探索方案。在混乱中找到秩序。"
+    },
+    "2": {
+      "title": "研究者",
+      "desc": "整理文献，对比实验。节点和连线承载你的上下文。"
+    },
+    "3": {
+      "title": "产品/设计师",
+      "desc": "拆解需求，可视化流程。拖拽和连线让你感到自由。"
+    },
+    "4": {
+      "title": "学生/终身学习者",
+      "desc": "学习规划，知识积累。游客模式让你无压力体验。"
+    }
+  },
+  "cta": {
+    "title": "你的第一块画布，现在就可以开始",
+    "note": "无需注册，游客模式直接体验。你的想法不会丢失。",
+    "button": "开始我的第一块画布"
+  },
+  "footer": {
+    "tagline": "为思考者而建",
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "contact": "联系我们",
+    "desc": "AI ???????????????????????",
+    "product": {
+      "intro": "功能介绍",
+      "changelog": "更新日志",
+      "guide": "使用指南"
+    },
+    "about": {
+      "roa": "关于 Roa",
+      "contact": "联系方式"
+    },
+    "friends": "????",
+    "group": {
+      "chat": "AI ????",
+      "api": "API ????",
+      "tools": "AI ?????",
+      "dev": "AI ?????",
+      "vision": "AI ?????",
+      "open": "???????",
+      "learn": "AI ?????",
+      "journal": "AI ?????",
+      "world": "?????????",
+      "hw": "AI ????",
+      "framework": "??????",
+      "agent": "AI Agent ??",
+      "voice": "AI ?????",
+      "data": "????????",
+      "mlops": "MLOps ???"
+    },
+    "productLabel": "??",
+    "aboutLabel": "??",
+    "friendsLabel": "????",
+    "friendsExpand": "展开更多"
+  },
+  "product": {
+    "doubao": "??",
+    "tongyi": "????",
+    "wenxin": "????",
+    "hunyuan": "??",
+    "baichuan": "??",
+    "xunfei": "????",
+    "zhipu": "?? AI",
+    "qianfan": "????",
+    "tongyi-lingxi": "????",
+    "siliconflow": "????",
+    "kling": "??",
+    "jimeng": "??",
+    "tongyi-wanxiang": "????",
+    "hailuo": "??AI",
+    "paddle": "PaddlePaddle",
+    "mindspore": "MindSpore",
+    "oneflow": "OneFlow",
+    "kimi": "Kimi",
+    "chatglm": "ChatGLM",
+    "jiqi": "????",
+    "liangzi": "???",
+    "36kr": "36Kr AI",
+    "dify": "Dify",
+    "fastgpt": "FastGPT",
+    "coze": "Coze",
+    "maxai": "MaxAI",
+    "lobechat": "LobeChat",
+    "chatbox": "ChatBox",
+    "msty": "Msty"
+  }
 }

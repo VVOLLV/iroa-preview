@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Roa Cursor System v4
  * Circular color ring cursor
  */

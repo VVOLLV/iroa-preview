@@ -68,6 +68,7 @@ const RoaApp = (() => {
     // 1. Initialize theme system first (affects CSS)
     if (isSystemAvailable('ThemeSystem')) {
       results.theme = await safeInit('ThemeSystem', () => ThemeSystem.init());
+      document.documentElement.setAttribute('data-theme-applied', 'true');
     }
 
     // 2. Initialize i18n system
