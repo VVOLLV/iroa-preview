@@ -586,6 +586,10 @@ img, svg {
   gap: 32px 40px;
 }
 
+.footer-friends-grid.expanded {
+  max-height: none;
+}
+
 .footer-friend-group {
   display: flex;
   flex-direction: column;
@@ -2246,7 +2250,6 @@ img, svg {
 .theme-btn,
 .feature-card,
 .scenario-card,
-.footer,
 .cta,
 .philosophy {
   transition: background-color var(--transition-theme),

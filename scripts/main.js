@@ -164,24 +164,26 @@ const RoaApp = (() => {
     const toggle = document.querySelector('.friends-toggle');
     if (!grid || !toggle) return;
 
-    // Start collapsed
-    grid.classList.add('collapsed');
+    // CSS handles collapsed state by default
     toggle.setAttribute('aria-expanded', 'false');
 
     toggle.addEventListener('click', () => {
       const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      const textEl = toggle.querySelector('.friends-toggle-text');
       if (isExpanded) {
-        grid.classList.add('collapsed');
+        grid.classList.remove('expanded');
         toggle.setAttribute('aria-expanded', 'false');
-        toggle.querySelector('.friends-toggle-text').textContent = '\u5c55\u5f00\u66f4\u591a';
+        if (textEl) {
+          const t = (typeof I18nSystem !== 'undefined') ? I18nSystem.t('footer.friendsExpand') : '';
+          textEl.textContent = (t && t !== 'footer.friendsExpand') ? t : '\u5c55\u5f00\u66f4\u591a';
+        }
       } else {
-        grid.classList.remove('collapsed');
+        grid.classList.add('expanded');
         toggle.setAttribute('aria-expanded', 'true');
-        toggle.querySelector('.friends-toggle-text').textContent = '\u6536\u8d77';
+        if (textEl) textEl.textContent = '\u6536\u8d77';
       }
     });
   }
-
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
