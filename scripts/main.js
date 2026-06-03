@@ -164,7 +164,8 @@ const RoaApp = (() => {
     const toggle = document.querySelector('.friends-toggle');
     if (!grid || !toggle) return;
 
-    // CSS handles collapsed state by default
+    // Start collapsed by default
+    grid.classList.add('collapsed');
     toggle.setAttribute('aria-expanded', 'false');
 
     toggle.addEventListener('click', () => {
@@ -172,15 +173,17 @@ const RoaApp = (() => {
       const textEl = toggle.querySelector('.friends-toggle-text');
       if (isExpanded) {
         grid.classList.remove('expanded');
+        grid.classList.add('collapsed');
         toggle.setAttribute('aria-expanded', 'false');
         if (textEl) {
           const t = (typeof I18nSystem !== 'undefined') ? I18nSystem.t('footer.friendsExpand') : '';
-          textEl.textContent = (t && t !== 'footer.friendsExpand') ? t : '\u5c55\u5f00\u66f4\u591a';
+          textEl.textContent = (t && t !== 'footer.friendsExpand') ? t : '展开更多';
         }
       } else {
+        grid.classList.remove('collapsed');
         grid.classList.add('expanded');
         toggle.setAttribute('aria-expanded', 'true');
-        if (textEl) textEl.textContent = '\u6536\u8d77';
+        if (textEl) textEl.textContent = '收起';
       }
     });
   }
