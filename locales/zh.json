@@ -31,41 +31,41 @@
     }
   },
   "philosophy": {
-    "label": "THINKING SPACE",
-    "sub2": "建了一个家",
-    "line1": "思考，是一种",
-    "line2": "需要空间的",
-    "line3": "活动。",
-    "sub1": "我们为它",
-    "bg1": "Think in",
-    "bg2": "SPACE,",
-    "bg3": "not in lines."
+    "label": "思考空间",
+    "sub2": "一个家",
+    "line1": "思考是",
+    "line2": "一种需要",
+    "line3": "空间的活动。",
+    "sub1": "我们建造了它",
+    "bg1": "在空间中",
+    "bg2": "思考，",
+    "bg3": "而不是在行间。"
   },
   "scenarios": {
-    "title": "谁在用它",
-    "subtitle": "四种人，同一个需求"
+    "title": "谁在使用它",
+    "subtitle": "四种人，一个共同需求"
   },
   "scenario": {
     "1": {
       "title": "知识工作者",
-      "desc": "组织复杂信息，并行探索方案。在混乱中找到秩序。"
+      "desc": "整理复杂信息，同时探索多种方案。在混沌中找到秩序。"
     },
     "2": {
       "title": "研究者",
       "desc": "整理文献，对比实验。节点和连线承载你的上下文。"
     },
     "3": {
-      "title": "产品/设计师",
-      "desc": "拆解需求，可视化流程。拖拽和连线让你感到自由。"
+      "title": "产品与设计师",
+      "desc": "拆解需求，可视化工作流。拖拽与连接，感受自由。"
     },
     "4": {
-      "title": "学生/终身学习者",
-      "desc": "学习规划，知识积累。游客模式让你无压力体验。"
+      "title": "学生与终身学习者",
+      "desc": "规划学习，积累知识。访客模式让你无压力探索。"
     }
   },
   "cta": {
-    "title": "你的第一块画布，现在就可以开始",
-    "note": "无需注册，游客模式直接体验。你的想法不会丢失。",
+    "title": "你的第一块画布，现在开始",
+    "note": "无需注册，以访客身份体验。你的想法很安全。",
     "button": "开始我的第一块画布"
   },
   "footer": {
@@ -73,7 +73,7 @@
     "privacy": "隐私政策",
     "terms": "使用条款",
     "contact": "联系我们",
-    "desc": "AI ???????????????????????",
+    "desc": "AI 原生思维工具，让思考更自然、更有序、更有温度。",
     "product": {
       "intro": "功能介绍",
       "changelog": "更新日志",
@@ -83,55 +83,55 @@
       "roa": "关于 Roa",
       "contact": "联系方式"
     },
-    "friends": "????",
+    "friends": "友情链接",
     "group": {
-      "chat": "AI ????",
-      "api": "API ????",
-      "tools": "AI ?????",
-      "dev": "AI ?????",
-      "vision": "AI ?????",
-      "open": "???????",
-      "learn": "AI ?????",
-      "journal": "AI ?????",
-      "world": "?????????",
-      "hw": "AI ????",
-      "framework": "??????",
-      "agent": "AI Agent ??",
-      "voice": "AI ?????",
-      "data": "????????",
-      "mlops": "MLOps ???"
+      "chat": "AI 对话产品",
+      "api": "API 开放平台",
+      "tools": "AI 工具与应用",
+      "dev": "AI 编程与开发",
+      "vision": "AI 图像与视觉",
+      "open": "开源模型与社区",
+      "learn": "AI 学习与研究",
+      "journal": "AI 期刊与资讯",
+      "world": "世界模型与空间智能",
+      "hw": "AI 硬件与芯片",
+      "framework": "深度学习框架",
+      "agent": "AI Agent 平台",
+      "voice": "AI 语音与音乐",
+      "data": "数据与向量数据库",
+      "mlops": "MLOps 与部署"
     },
-    "productLabel": "??",
-    "aboutLabel": "??",
-    "friendsLabel": "????",
+    "productLabel": "产品",
+    "aboutLabel": "关于",
+    "friendsLabel": "友情链接",
     "friendsExpand": "展开更多"
   },
   "product": {
-    "doubao": "??",
-    "tongyi": "????",
-    "wenxin": "????",
-    "hunyuan": "??",
-    "baichuan": "??",
-    "xunfei": "????",
-    "zhipu": "?? AI",
-    "qianfan": "????",
-    "tongyi-lingxi": "????",
-    "siliconflow": "????",
-    "kling": "??",
-    "jimeng": "??",
-    "tongyi-wanxiang": "????",
-    "hailuo": "??AI",
-    "paddle": "PaddlePaddle",
+    "doubao": "豆包",
+    "tongyi": "通义千问",
+    "wenxin": "文心一言",
+    "hunyuan": "混元",
+    "baichuan": "百川",
+    "xunfei": "讯飞星火",
+    "zhipu": "智谱 AI",
+    "qianfan": "百度千帆",
+    "tongyi-lingxi": "通义灵码",
+    "siliconflow": "硅基流动",
+    "kling": "可灵",
+    "jimeng": "即梦",
+    "tongyi-wanxiang": "通义万相",
+    "hailuo": "海螺 AI",
+    "paddle": "飞桨",
     "mindspore": "MindSpore",
     "oneflow": "OneFlow",
     "kimi": "Kimi",
     "chatglm": "ChatGLM",
-    "jiqi": "????",
-    "liangzi": "???",
+    "jiqi": "机器之心",
+    "liangzi": "量子位",
     "36kr": "36Kr AI",
     "dify": "Dify",
     "fastgpt": "FastGPT",
-    "coze": "Coze",
+    "coze": "扣子",
     "maxai": "MaxAI",
     "lobechat": "LobeChat",
     "chatbox": "ChatBox",

@@ -1,133 +1,133 @@
 {
   "meta": {
     "title": "Roa - 思考に、居場所を",
-    "description": "Roa は考えるキャンバス。記録だけでなく、探求の場。"
+    "description": "Roa は考えるキャンバス。記録だけじゃない、探索する場所。"
   },
   "nav": {
     "logo": "Roa"
   },
   "hero": {
     "title": "思考に、居場所を",
-    "subtitle": "Roa は考えるキャンバス。記録だけでなく、探求の場。",
-    "cta": "はじめてのキャンバスを",
+    "subtitle": "Roa は考えるキャンバス。記録だけじゃない、探索する場所。",
+    "cta": "最初のキャンバスを始める",
     "cta-secondary": "できることを見る"
   },
   "features": {
     "title": "できること",
-    "subtitle": "あなたを驚かせる3つの力"
+    "subtitle": "あなたを驚かせる三つの力"
   },
   "feature": {
     "1": {
-      "title": "思考が、かたちになる",
-      "desc": "ノードと接続で、抽象的なアイデアが見えたり、触ったり、再構成できるように。"
+      "title": "思考に、かたちが生まれる",
+      "desc": "ノードと接続が、抽象的なアイデアを可視化し、触れやすく、再構築可能にします。"
     },
     "2": {
-      "title": "AI は待つ。遮らない。",
-      "desc": "AI は必要な時に現れ、考えている時は沈黙します。あなたのリズムを尊重します。"
+      "title": "AI は邪魔しない、待っていてくれる",
+      "desc": "必要な時に現れ、考えている時は沈黙する。あなたのリズムを尊重します。"
     },
     "3": {
-      "title": "全体と詳細を、同時に",
-      "desc": "自由にズーム—森とすべての葉を同時に見ることができます。"
+      "title": "全体と細部を、同時に見る",
+      "desc": "自由にズーム——森も、一枚一枚の葉も同時に見える。"
     }
   },
   "philosophy": {
-    "label": "THINKING SPACE",
-    "sub2": "居場所を建てた",
-    "line1": "思考とは、",
+    "label": "思考空間",
+    "sub2": "居場所",
+    "line1": "思考は",
     "line2": "空間を必要とする",
     "line3": "活動です。",
-    "sub1": "それに、",
-    "bg1": "Think in",
-    "bg2": "SPACE,",
-    "bg3": "not in lines."
+    "sub1": "わたしたちはそれを",
+    "bg1": "空間の中で",
+    "bg2": "思考する、",
+    "bg3": "行間ではなく。"
   },
   "scenarios": {
     "title": "誰が使っているか",
-    "subtitle": "4タイプの人々、共通のニーズ"
+    "subtitle": "四つのタイプ、一つの共通ニーズ"
   },
   "scenario": {
     "1": {
       "title": "ナレッジワーカー",
-      "desc": "複雑な情報を整理し、並行してソリューションを探索。混沌の中に秩序を見つける。"
+      "desc": "複雑な情報を整理し、複数の解決策を並行して探索。混沌の中に秩序を見つける。"
     },
     "2": {
       "title": "研究者",
-      "desc": "文献を整理し、実験を比較。ノードと接続があなたのコンテキストを保持します。"
+      "desc": "文献を整理し、実験を比較。ノードと接続がコンテキストを担う。"
     },
     "3": {
-      "title": "プロダクト/デザイナー",
-      "desc": "要件を分解し、ワークフローを可視化。ドラッグと接続で自由を感じる。"
+      "title": "プロダクト・デザイナー",
+      "desc": "要件を分解し、ワークフローを可視化。ドラッグ＆接続で自由を感じる。"
     },
     "4": {
-      "title": "学生/生涯学習者",
-      "desc": "学習計画、知識の蓄積。ゲストモードでストレスなく体験できます。"
+      "title": "学生・生涯学習者",
+      "desc": "学習を計画し、知識を蓄積。ゲストモードでプレッシャーなく探索。"
     }
   },
   "cta": {
-    "title": "はじめてのキャンバスは、今",
-    "note": "登録不要。ゲストで体験できます。データは失われません。",
-    "button": "はじめてのキャンバスを"
+    "title": "最初のキャンバスは今ここから",
+    "note": "登録不要。ゲストでお試し可能。あなたの思考は安全です。",
+    "button": "最初のキャンバスを始める"
   },
   "footer": {
     "tagline": "思考者のために",
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
     "contact": "お問い合わせ",
-    "desc": "AI??????????????????????????????",
+    "desc": "AI ネイティブ思考ツール。思考をより自然に、より秩序立てて、より温かく。",
     "product": {
       "intro": "機能紹介",
       "changelog": "更新履歴",
-      "guide": "ユーザーガイド"
+      "guide": "使い方ガイド"
     },
     "about": {
       "roa": "Roa について",
       "contact": "お問い合わせ"
     },
-    "friends": "???????",
+    "friends": "フレンドリンク",
     "group": {
-      "chat": "AI ????",
-      "api": "API ????????",
-      "tools": "AI ???????",
-      "dev": "AI ??",
-      "vision": "AI ????",
-      "open": "OSS???????",
-      "learn": "AI ?????",
-      "journal": "AI ?????",
-      "world": "????????AI",
-      "hw": "AI ??????",
-      "framework": "???????????",
-      "agent": "AI Agent ????????",
-      "voice": "AI ?????",
-      "data": "????????DB",
-      "mlops": "MLOps?????"
+      "chat": "AI チャット",
+      "api": "API プラットフォーム",
+      "tools": "AI ツール＆アプリ",
+      "dev": "AI 開発＆コーディング",
+      "vision": "AI ビジョン",
+      "open": "オープンソース＆コミュニティ",
+      "learn": "AI 学習＆研究",
+      "journal": "AI ジャーナル＆ニュース",
+      "world": "世界モデル＆空間知能",
+      "hw": "AI ハードウェア",
+      "framework": "深層学習フレームワーク",
+      "agent": "AI Agent プラットフォーム",
+      "voice": "AI 音声＆音楽",
+      "data": "データ＆ベクトルDB",
+      "mlops": "MLOps＆デプロイ"
     },
-    "productLabel": "?????",
-    "aboutLabel": "????",
-    "friendsLabel": "???????",
+    "productLabel": "プロダクト",
+    "aboutLabel": "について",
+    "friendsLabel": "フレンドリンク",
     "friendsExpand": "もっと見る"
   },
   "product": {
-    "doubao": "??",
-    "tongyi": "????",
-    "wenxin": "????",
-    "hunyuan": "??",
-    "baichuan": "??",
-    "xunfei": "????",
-    "zhipu": "??AI",
-    "qianfan": "????",
-    "tongyi-lingxi": "????",
+    "doubao": "豆包",
+    "tongyi": "Tongyi Qianwen",
+    "wenxin": "Wenxin Yiyan",
+    "hunyuan": "Hunyuan",
+    "baichuan": "Baichuan",
+    "xunfei": "iFlytek Spark",
+    "zhipu": "Zhipu AI",
+    "qianfan": "Baidu Qianfan",
+    "tongyi-lingxi": "Tongyi Lingxi",
     "siliconflow": "SiliconFlow",
-    "kling": "??",
-    "jimeng": "??",
-    "tongyi-wanxiang": "????",
-    "hailuo": "??AI",
+    "kling": "Kling",
+    "jimeng": "Jimeng",
+    "tongyi-wanxiang": "Tongyi Wanxiang",
+    "hailuo": "Hailuo AI",
     "paddle": "PaddlePaddle",
     "mindspore": "MindSpore",
     "oneflow": "OneFlow",
     "kimi": "Kimi",
     "chatglm": "ChatGLM",
-    "jiqi": "????",
-    "liangzi": "???",
+    "jiqi": "Jiqizhixin",
+    "liangzi": "QbitAI",
     "36kr": "36Kr AI",
     "dify": "Dify",
     "fastgpt": "FastGPT",

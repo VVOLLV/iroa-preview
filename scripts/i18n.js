@@ -14,17 +14,31 @@ const I18nSystem = (() => {
   let isLoading = false;
 
   /**
-   * Fetch JSON with XHR (works on file:// protocol)
+   * Fetch JSON with robust encoding support.
+   * Uses fetch() API for reliable UTF-8 handling on GitHub Pages,
+   * falls back to XHR for file:// protocol.
    */
   function fetchJSON(url) {
-    return new Promise((resolve, reject) => {
-      const xhr = new XMLHttpRequest();
+    // Use fetch() for http/https — handles charset correctly
+    if (window.fetch && window.location.protocol !== 'file:') {
+      return fetch(url).then(function(response) {
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        return response.text();
+      }).then(function(text) {
+        // Strip BOM if present
+        if (text.charCodeAt(0) === 0xFEFF) text = text.substring(1);
+        return JSON.parse(text);
+      });
+    }
+    // XHR fallback for file:// protocol
+    return new Promise(function(resolve, reject) {
+      var xhr = new XMLHttpRequest();
       xhr.open('GET', url, true);
       xhr.overrideMimeType('application/json; charset=utf-8');
-      xhr.onload = () => {
+      xhr.onload = function() {
         if (xhr.status === 200 || xhr.status === 0) {
           try {
-            const text = xhr.responseText.replace(/^\uFEFF/, '');
+            var text = xhr.responseText.replace(/^\uFEFF/, '');
             resolve(JSON.parse(text));
           } catch (e) {
             reject(new Error('JSON parse error: ' + e.message));
@@ -33,7 +47,7 @@ const I18nSystem = (() => {
           reject(new Error('HTTP ' + xhr.status));
         }
       };
-      xhr.onerror = () => reject(new Error('Network error'));
+      xhr.onerror = function() { reject(new Error('Network error')); };
       xhr.send();
     });
   }
