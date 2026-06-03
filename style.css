@@ -455,7 +455,7 @@ img, svg {
 .cta {
   background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-elevated) 100%);
   text-align: center;
-  padding: 160px 0;
+  padding: 80px 0;
 }
 
 .cta-content {
@@ -493,7 +493,7 @@ img, svg {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 48px;
-  padding: 64px 0 48px;
+  padding: 40px 0 32px;
 }
 
 .footer-brand {
@@ -565,7 +565,7 @@ img, svg {
 
 /* Friend Links Section */
 .footer-friends {
-  padding: 36px 0;
+  padding: 24px 0;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
@@ -690,16 +690,16 @@ img, svg {
 
 .footer-philosophy {
   text-align: center;
-  padding: 100px 24px 80px;
+  padding: 48px 24px 36px;
   border-bottom: 1px solid var(--color-border);
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
 
 .footer-philosophy-line {
   font-family: var(--font-heading);
-  font-size: 120px;
+  font-size: 72px;
   font-weight: 700;
   color: var(--color-text);
   line-height: 1.1;
@@ -803,7 +803,7 @@ img, svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
+  padding: 16px 0;
 }
 
 .footer-legal {
