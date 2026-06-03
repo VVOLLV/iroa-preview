@@ -588,6 +588,8 @@ img, svg {
 
 .footer-friends-grid.expanded {
   max-height: none;
+  opacity: 1;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
 }
 
 .footer-friend-group {
@@ -746,21 +748,13 @@ img, svg {
 }
 /* Friend links collapsed state */
 .footer-friends-grid.collapsed {
-  max-height: 220px;
+  max-height: 0;
   overflow: hidden;
-  position: relative;
+  opacity: 0;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
 }
 
-.footer-friends-grid.collapsed::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(transparent 0%, var(--color-bg-elevated) 100%);
-  pointer-events: none;
-}
+
 
 /* Toggle button */
 .friends-toggle {
@@ -1420,9 +1414,7 @@ img, svg {
   background-color: #F8F9FA;
 }
 
-[data-theme="random"] .footer-friends-grid.collapsed::after {
-  background: linear-gradient(transparent 0%, #F8F9FA 100%);
-}
+
 
 [data-theme="random"] .navbar.scrolled {
   background-color: rgba(255,255,255,0.95);
